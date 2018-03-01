@@ -1,0 +1,64 @@
+﻿
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            font: 12px/1.5 Verdana, Geneva, sans-serif;
+        }
+        .filetable
+        {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 30px;
+        }
+        .file_box
+        {
+            padding: 10px;
+        }
+        .file_box_left
+        {
+            width: 80%;
+            padding-right: 30px;
+            border-right: 1px solid #666;
+        }
+        .file_box_right
+        {
+            text-align: center;
+            width: 15%;
+        }
+        .float_l
+        {
+            float: left;
+        }
+        .float_r
+        {
+            float: right;
+        }
+        .divspacing
+        {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .btn_normal_2
+        {
+            width: 60px;
+        }
+        .thead
+        {
+            border: 1px solid #7f9db9;
+            text-align: center;
+            font-size: 13px;
+            font-weight: bold;
+            color: #FFF;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        .tdlist
+        {
+            border: 1px solid #7f9db9;
+            text-align: center;
+            color: #69F;
+        }

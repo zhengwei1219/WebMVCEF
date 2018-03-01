@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html style="height:100%">
+    <head>
+       <meta name="viewport" content="width=device-width" />
+    <title>PanelDome</title>
+        <script src="~/Scripts/echarts.js"></script> 
+    </head>
+    <body style="height:100%;margin:0">
+<div id="LineMain" style="height:100%"></div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    var lineMain = document.getElementById("LineMain");
+    var myChart = echarts.init(lineMain);
+    var app = {};
+    option = null;
+    option = {
+        tooltip: {
+            formatter: "{a} <br/>{b} : {c}%"
+        },
+        toolbox: {
+            feature: {
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        series: [
+            {
+                name: '业务指标',
+                type: 'gauge',
+                detail: { formatter: '{value}%' },
+                data: [{ value: 50, name: '完成率' }]
+            }
+        ]
+    };
+
+    setInterval(function () {
+        option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+        myChart.setOption(option, true);
+    }, 2000);
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+</script>
+

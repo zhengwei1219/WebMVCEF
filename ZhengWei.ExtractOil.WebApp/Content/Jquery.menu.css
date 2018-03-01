@@ -1,0 +1,76 @@
+span.jqueryclickmenu
+{
+	border:1px solid buttonface;
+	background-image:url(menu_down.gif);
+	background-position:center right;
+	background-repeat:no-repeat;
+	padding:2px 20px 2px 5px;
+	cursor:pointer;
+}
+
+span.menu
+{
+	border:0;
+	background-image:url(menu_down.gif);
+	background-position:center right;
+	background-repeat:no-repeat;
+	padding:2px 15px 2px 5px;
+	color:white;
+	font-weight:bolder;
+}
+
+div.menu-div
+{
+}
+
+ul.menu-ul
+{
+	background-color: #dde5f2;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width:100%;
+	border:1px solid #69C;
+}
+
+li.menu-separator .active{
+	background-color: transparent;
+}
+
+li.active {
+	background-color: #078BBA;
+	color:White;
+}
+
+
+* html div.menu-item {
+	display: inline; /* fixes problem in ie6 */
+}
+
+li.menumain {
+	float: left;
+	padding: 0 10px;
+}
+
+div.menu-item {
+	padding: 5px 0 2px 4px;
+	height:23px;
+	margin:0;
+}
+.menu-item a
+{
+	width:150px;
+}
+img.menu-item-arrow{
+	position: absolute;
+	right: 4px;
+	top: 8px;
+}
+li.menu-separator{
+	border-bottom: 1px solid #000;
+	font-size: 0; /* for ie */
+	height: 0;
+	line-height: 0; /* for ie */
+	margin: 2px 0;
+}
+

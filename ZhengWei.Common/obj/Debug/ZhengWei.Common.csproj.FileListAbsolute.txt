@@ -1,0 +1,4 @@
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.Common\bin\Debug\ZhengWei.Common.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.Common\bin\Debug\ZhengWei.Common.pdb
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.Common\obj\Debug\ZhengWei.Common.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.Common\obj\Debug\ZhengWei.Common.pdb

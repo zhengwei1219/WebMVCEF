@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Content/themes/icon.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.7.1.min.js"></script>
+    <script src="../Scripts/jquery.easyui.min.js"></script>
+    <script src="../Scripts/easyui-lang-zh_CN.js"></script>
+    <script src="../Scripts/datapattern.js"></script>
+    <script src="../Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="../Scripts/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <div>
+         <table id="tt" style="width: 700px;" title="标题，可以使用代码进行初始化，也可以使用这种属性的方式" iconcls="icon-edit">
+    </table> 
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $("#tt").datagrid({
+        width: 700,
+        height:400
+    });
+
+</script>

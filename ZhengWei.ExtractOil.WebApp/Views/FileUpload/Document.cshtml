@@ -1,0 +1,172 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>文档上传至TPF</title>
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/ui.jqgrid.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>
+    <script src="~/Scripts/JqGrid/jquery.jqGrid.src.js"></script>
+    <script src="~/Scripts/JqGrid/grid.locale-cn.js"></script>
+    <script src="~/Scripts/JqGrid/grid.setcolumns.js"></script>
+    <script src="~/Scripts/JqGrid/JqGridHelper.js"></script>    
+</head>
+<body>
+    <div>
+        <input type="button" class="btn btn-primary" value="新增文档" onclick="addNew(); " />
+       <table id="Docs" >
+            </table>
+            <div id="pager">
+            </div>
+         <div id="DocDlg">
+            </div> 
+    </div>
+</body>    
+</html>
+<script type="text/javascript">
+    $(function () {
+        initGrid();
+    })
+    var myData = [];
+    var tableObj;
+    var AddDocUrl = '@(Url.Action("AddDoc", "FileUpload"))'
+    function addNew() {
+        var ParentDocId = '@Guid.Empty';
+       $.ajax({
+           type: "POST",
+           ajaxCache: false,
+           url: AddDocUrl, //服务
+           data: { },
+           success: function (data) {
+               $('#DocDlg').html(data); //write the dialog content into the diaog container
+               $("#DocDlg").dialog({ //dialogize it with JqueryUI
+                   autoOpen: true,
+                   title: '上传文档',
+                        height: 500,
+                        width: 660,
+                        modal: true,
+                        buttons: {
+                            '关闭': function () { $(this).dialog("close"); }
+                        },
+                        close: function () {
+                            //refFun();
+                        }
+                    });
+           }, error: function (req, status, error) {
+               alert('增加' + '失败,原因:' + error);                   
+                }
+            });
+            }
+    function initGrid() {
+        tableObj = jQuery("#Docs");
+        tableObj.jqGrid({
+            data: myData,
+            datatype: "jason",
+            height: 400,
+            rowNum: 50,
+            rowList: [50, 500, 1000, 'all'],
+            colNames: ["Id", 'DocName', "文档名称","文档路径", "父文档名称", "父文档路径", "文档类型","编写日期", "编写单位", "编写人", "备注", 'szwdzx_Id',
+            "录入人", "录入时间", "录入单位", "审核人", "审核时间", "审核单位", "最近更新人", "最近更新时间", "最近更新单位", "是否提交中心库", "发布单位", "采集方式", "发布质量", "发布质量", "密级", "能否编辑", "能否审核", "批次Id"],
+            colModel: [{ name: 'Id', index: 'Id', width: 1, hidden: true, hidedlg: true },
+                            { name: "DocName", index: "DocName", width: 1, align: "left", hidden: true, hidedlg: true },
+							{ name: "DocDisplayName", index: "DocDisplayName", width: 200, align: "left", sortable: false },
+                            //{ name: "DocPath", index: "DocPath", width: 10, hidden: true, sortable: false, hidedlg: true },
+                            { name: "DOC_URL", index: "DOC_URL", width: 10, hidden: true, sortable: false, hidedlg: true },
+                            { name: "ParentDoc.DocName", index: "ParentDocName", width: 80, align: "left", sortable: false },
+                            { name: "ParentDoc.DocPath", index: "ParentDocPath", hidden: true, sortable: false, hidedlg: true },
+                            { name: "DocClassCode", index: "DocClassCode", width: 80, align: "left", hidden: true, sortable: false, hidedlg: true },
+							{ name: "EndDate", index: "EndDate", width: 80, align: "right", formatter: "date", formatoptions: { newformat: 'Y-m-d' }, sortable: false },
+							{ name: "Org.Name", index: "Org.Name", width: 80, align: "left", sortable: false },
+							{ name: "Composer", index: "Composer", width: 80, align: "left", sortable: false, hidden: false, hidedlg: true },
+							{ name: "Remark", index: "Remark", width: 80, align: "left", sortable: false },
+                            { name: "szwdzx_Id", index: "szwdzx_Id", width: 80, align: "left", sortable: false, hidden: true, hidedlg: true },
+                            { name: "MetaData.Input_User", index: "MetaData.Input_User", hidden: true, hidedlg: true },
+                            { name: "MetaData.Input_Time", index: "MetaData.Input_Time", hidden: true, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, hidedlg: true },
+                            { name: "MetaData.Input_ORG", index: "MetaData.Input_ORG", hidden: true, hidedlg: true },
+                            { name: "MetaData.Verifier", index: "MetaData.Verifier", hidden: true, hidedlg: true },
+                            { name: "MetaData.Verify_Date", index: "MetaData.Verify_Date", hidden: true, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, hidedlg: true },
+                            { name: "MetaData.Verify_ORG", index: "MetaData.Verify_ORG", hidden: true, hidedlg: true },
+                            { name: "MetaData.Update_User", index: "MetaData.Update_User", hidden: true, hidedlg: true },
+                            { name: "MetaData.Update_Date", index: "MetaData.Update_Date", width: 80, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, hidden: true, hidedlg: true },
+                            { name: "MetaData.Update_Org", index: "MetaData.Update_Org", hidden: true, hidedlg: true },
+                            { name: "MetaData.IS_Submit_Centre_DB", index: "MetaData.IS_Submit_Centre_DB", hidden: true, hidedlg: true },
+                            { name: "MetaData.Publish_ORG", index: "MetaData.Publish_ORG", hidden: true, hidedlg: true },
+                            { name: "MetaData.ACQTN_Mode", index: "MetaData.ACQTN_Mode", hidden: true, hidedlg: true },
+                            { name: "MetaData.Quality_Tag_Str", index: "MetaData.Quality_Tag_Str", hidden: true, hidedlg: true },
+                            { name: "MetaData.QualityTagText", index: "MetaData.QualityTagText", hidden: false, hidedlg: true },
+                            { name: "MetaData.Secrecy_Level", index: "MetaData.Secrecy_Level", hidden: true, hidedlg: true },
+                            { name: "CanEdit", index: "CanEdit", hidden: true, hidedlg: true },
+                            { name: "CanApp", index: "CanApp", hidden: true, hidedlg: true },
+                            { name: "MetaData.Batch.Id", index: "MetaData.Batch.Id", hidden: true, hidedlg: true }
+            ],
+            emptyrecords: "没有任何数据",
+            multiselect: true,
+            cellsubmit: 'clientArray',
+            cellEdit: false,
+            pager: "#pager",
+            viewrecords: true,
+            rownumbers: true,
+            sortorder: "desc",
+            sortname: "EndDate",
+            sortable: false,
+            //onCellSelect: function (rowid, iCol, cellcontent, e) {
+            //vRowid = rowid;
+            // vICol = iCol;
+            //},
+            ondblClickRow: function (rowid, iRow, iCol, e) {
+                vRowid = rowid;
+                vICol = iCol;
+                var MetaDataStatus = getOneRowCol(rowid, "MetaData.Quality_Tag_Str");
+                if (getOneRowCol(rowid, "CanApp") != "false")
+                    GridonCellSelect(tableObj, iCol, rowid, MetaDataStatus);
+            },
+            gridComplete: function () {
+                var ids = tableObj.getDataIDs();
+                for (var i = 0; i < ids.length; i++) {
+                    var DocName = tableObj.getCell(ids[i], "DocName");
+                    var DocPath = tableObj.getCell(ids[i], "DOC_URL");
+                    var szwdid = tableObj.getCell(ids[i], "szwdzx_Id");
+                    var docid = tableObj.getCell(ids[i], "Id");
+                    var pathurl = "";
+                    var localpathurl = '@Url.Action("FilePreview", "FilePreview")' + "?fileName=" + encodeURIComponent(DocPath) + "&szwdzxId=" + szwdid + "&docId=" + docid + "&a=" + Math.random();
+                    pathurl = '@Url.Action("FileList", "FilePreview")' + "?fileName=" + encodeURIComponent(DocPath) + "&szwdzxId=" + szwdid + "&docId=" + docid + "&a=" + Math.random();
+                    var html = "";
+                    if (szwdid != "") {
+                        html = DocName + "</a>&nbsp;&nbsp;<a class='title' title='快速预览' style='cursor:pointer' " + " ' rel='" + pathurl + "><img src='" + imagesUrl + "/i_view.gif' /></a>";
+                    } else {
+                        html = "<a target='_blank' title='点击下载' href='@Url.Action("DownFile", "FTP")?filepath=" + encodeURIComponent(DocPath) + "&docId=" + docid + "&WellboreId=" + WellboreId + "&a=" + Math.random() + "'>" + DocName + "</a>&nbsp;&nbsp;<a class='title' title='快速预览' style='cursor:pointer' " + " ' rel='" + localpathurl + "><img src='" + imagesUrl + "/i_view.gif' /></a>";
+                    }
+                    tableObj.setCell(ids[i], "DocDisplayName", html);
+                }
+                if (tableObj.jqGrid('getDataIDs').length > 0) {
+                    GetUpdateTargetData(code, dataType, tableObj);
+                    ExecErrorProcess(code, tableObj, dataType, code);
+                }
+                Setcluetip();
+            }
+        }).navGrid('#pager', { refresh: false, edit: false, add: false, del: false, search: true, searchtext: '搜索' }, {}, {}, {}, {
+            width: 680, sopt: ['eq', 'bw', 'ne', 'lt', 'le', 'gt', 'ge', 'ew', 'cn']
+        }).jqGrid('navButtonAdd', "#pager", {
+            caption: "", buttonicon: "setColumns", onClickButton: function () {
+                tableObj.setColumns({ colnameview: false, dataheight: 400, updateAfterCheck: true }); $("#eData").text("确定");
+            }, position: "last", title: "列隐藏", cursor: "pointer"
+        }).jqGrid('navButtonAdd', "#pager", {
+            caption: "", buttonicon: "ui-icon-pin-w", onClickButton: function () {
+                HideEmptyCol();
+            }, position: "last", title: "列过滤", cursor: "pointer"
+        });
+        jQuery(window).bind('resize', function () {
+            jQuery("#Docs").setGridWidth(document.body.clientWidth - 20, true); //设置自动宽度。 
+        }).trigger('resize');
+    }
+    function dialogClose() {
+        $('#DocDlg').dialog("close"); $.ajaxSetup({ cache: false })
+    }
+</script>

@@ -1,0 +1,25 @@
+﻿.comboztreepanel {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #92bcdf;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+    z-index: 99999!important;
+    background-color: White;
+    filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;
+}
+    .comboztreepanel ul li a span:nth-child(1) {
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: normal;
+        display: block;
+    }
+    .comboztreepanel ul li a:hover {
+        background: #3875d7;
+        color: #fff;
+    }
+  

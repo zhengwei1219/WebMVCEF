@@ -1,0 +1,78 @@
+﻿ @media print
+ {
+	body
+	{
+		background-color:White;
+	}
+	  .noprinting {display:none;}
+	  .pagebreak
+	  {
+		page-break-before:always;
+		clear:both;
+	  }
+	   .printbar
+	   {
+		display:none;
+	   }
+ }
+ body
+ {
+	margin:0px;
+ }
+ /*打印工具条的样式*/
+.printbar
+{
+	text-align:left;
+	height:40px;
+	padding:10px 100px 0 100px;
+	width:auto;
+	margin:0;
+	border-bottom:1px solid buttonshadow;
+	background-color:ButtonFace;
+}
+
+.alignright
+{
+	text-align:right;
+	padding-right:0cm;
+}
+
+.printhidden /*打印的时候需要隐藏内容(主要是套打的时候,不大内容但是又要留出空白)*/
+{
+}
+
+.pageinterval /*页面之间的一个小间隔,视觉效果看上去就想word里面的分页*/
+{
+	height:10px;
+	width:100%;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	background-color:ButtonShadow;
+}
+
+#budget
+{
+	font-size:12pt;
+}
+.underline
+{
+	border-bottom:1px  solid black;
+}
+
+/*需要自动按照函数进行加也显示的*/
+.pagebyrows
+{
+}
+.pagebyrows th
+{
+	font-size:13px;
+}
+.pagebyrows td
+{
+	font-size:13px;
+}
+
+td.center
+{
+	text-align:center;
+}

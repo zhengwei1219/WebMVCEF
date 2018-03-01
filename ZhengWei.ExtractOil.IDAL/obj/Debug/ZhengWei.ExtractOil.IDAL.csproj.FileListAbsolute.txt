@@ -1,0 +1,10 @@
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\ZhengWei.ExtractOil.IDAL.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\ZhengWei.ExtractOil.IDAL.pdb
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\ZhengWeil.ExtractOil.Model.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\EntityFramework.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\ZhengWeil.ExtractOil.Model.pdb
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\EntityFramework.xml
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\obj\Debug\ZhengWei.ExtractOil.IDAL.csprojResolveAssemblyReference.cache
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\obj\Debug\ZhengWei.ExtractOil.IDAL.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IDAL\obj\Debug\ZhengWei.ExtractOil.IDAL.pdb

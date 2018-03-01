@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ExtractOilModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ExtractOilModelStoreContainer">
+    <EntitySet Name="UserInfo" EntityType="ExtractOilModel.Store.UserInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RoleInfo" EntityType="ExtractOilModel.Store.RoleInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Department" EntityType="ExtractOilModel.Store.Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="R_UserInfo_ActionInfo" EntityType="ExtractOilModel.Store.R_UserInfo_ActionInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActionInfo" EntityType="ExtractOilModel.Store.ActionInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UserInfoRoleInfo" EntityType="ExtractOilModel.Store.UserInfoRoleInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ActionInfoRoleInfo" EntityType="ExtractOilModel.Store.ActionInfoRoleInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DepartmentUserInfo" EntityType="ExtractOilModel.Store.DepartmentUserInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DepartmentActionInfo" EntityType="ExtractOilModel.Store.DepartmentActionInfo" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_UserInfoRoleInfo_UserInfo" Association="ExtractOilModel.Store.FK_UserInfoRoleInfo_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="UserInfoRoleInfo" EntitySet="UserInfoRoleInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInfoRoleInfo_RoleInfo" Association="ExtractOilModel.Store.FK_UserInfoRoleInfo_RoleInfo">
+      <End Role="RoleInfo" EntitySet="RoleInfo" />
+      <End Role="UserInfoRoleInfo" EntitySet="UserInfoRoleInfo" />
+    </AssociationSet>
+    <AssociationSet Name="R_UserInfo_ActionInfoUserInfo" Association="ExtractOilModel.Store.R_UserInfo_ActionInfoUserInfo">
+      <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+      <End Role="UserInfo" EntitySet="UserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="R_UserInfo_ActionInfoActionInfo" Association="ExtractOilModel.Store.R_UserInfo_ActionInfoActionInfo">
+      <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+      <End Role="ActionInfo" EntitySet="ActionInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActionInfoRoleInfo_ActionInfo" Association="ExtractOilModel.Store.FK_ActionInfoRoleInfo_ActionInfo">
+      <End Role="ActionInfo" EntitySet="ActionInfo" />
+      <End Role="ActionInfoRoleInfo" EntitySet="ActionInfoRoleInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ActionInfoRoleInfo_RoleInfo" Association="ExtractOilModel.Store.FK_ActionInfoRoleInfo_RoleInfo">
+      <End Role="RoleInfo" EntitySet="RoleInfo" />
+      <End Role="ActionInfoRoleInfo" EntitySet="ActionInfoRoleInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepartmentUserInfo_Department" Association="ExtractOilModel.Store.FK_DepartmentUserInfo_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="DepartmentUserInfo" EntitySet="DepartmentUserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepartmentUserInfo_UserInfo" Association="ExtractOilModel.Store.FK_DepartmentUserInfo_UserInfo">
+      <End Role="UserInfo" EntitySet="UserInfo" />
+      <End Role="DepartmentUserInfo" EntitySet="DepartmentUserInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepartmentActionInfo_Department" Association="ExtractOilModel.Store.FK_DepartmentActionInfo_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="DepartmentActionInfo" EntitySet="DepartmentActionInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepartmentActionInfo_ActionInfo" Association="ExtractOilModel.Store.FK_DepartmentActionInfo_ActionInfo">
+      <End Role="ActionInfo" EntitySet="ActionInfo" />
+      <End Role="DepartmentActionInfo" EntitySet="DepartmentActionInfo" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Pwd" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="SubTime" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="DelFlag" Type="bit" Nullable="false" />
+    <Property Name="ModifiedOn" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Remark" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="Sort" Type="nvarchar" Nullable="true" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RoleInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DelFlag" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubTime" Type="datetime" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+    <Property Name="Sort" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DepName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ParentId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TreePath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Level" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsLeaf" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="R_UserInfo_ActionInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserInfoID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ActionInfoID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsPass" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserInfo_ID" Type="int" Nullable="false" />
+    <Property Name="ActionInfo_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActionInfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubTime" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DelFlag" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedOn" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Url" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="HttpMethod" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ActionMethod" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ControllerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ActionInfoName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MenuIcon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IconWidth" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IconHeight" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInfoRoleInfo">
+    <Key>
+      <PropertyRef Name="UserInfo_ID" />
+      <PropertyRef Name="RoleInfo_ID" />
+    </Key>
+    <Property Name="UserInfo_ID" Type="int" Nullable="false" />
+    <Property Name="RoleInfo_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActionInfoRoleInfo">
+    <Key>
+      <PropertyRef Name="ActionInfo_ID" />
+      <PropertyRef Name="RoleInfo_ID" />
+    </Key>
+    <Property Name="ActionInfo_ID" Type="int" Nullable="false" />
+    <Property Name="RoleInfo_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DepartmentUserInfo">
+    <Key>
+      <PropertyRef Name="Department_ID" />
+      <PropertyRef Name="UserInfo_ID" />
+    </Key>
+    <Property Name="Department_ID" Type="int" Nullable="false" />
+    <Property Name="UserInfo_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DepartmentActionInfo">
+    <Key>
+      <PropertyRef Name="Department_ID" />
+      <PropertyRef Name="ActionInfo_ID" />
+    </Key>
+    <Property Name="Department_ID" Type="int" Nullable="false" />
+    <Property Name="ActionInfo_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="R_UserInfo_ActionInfoUserInfo">
+    <End Role="R_UserInfo_ActionInfo" Type="ExtractOilModel.Store.R_UserInfo_ActionInfo" Multiplicity="*" />
+    <End Role="UserInfo" Type="ExtractOilModel.Store.UserInfo" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="R_UserInfo_ActionInfo">
+        <PropertyRef Name="UserInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_UserInfo_ActionInfoActionInfo">
+    <End Role="R_UserInfo_ActionInfo" Type="ExtractOilModel.Store.R_UserInfo_ActionInfo" Multiplicity="*" />
+    <End Role="ActionInfo" Type="ExtractOilModel.Store.ActionInfo" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ActionInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="R_UserInfo_ActionInfo">
+        <PropertyRef Name="ActionInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfoRoleInfo_UserInfo">
+    <End Role="UserInfo" Type="ExtractOilModel.Store.UserInfo" Multiplicity="1" />
+    <End Role="UserInfoRoleInfo" Type="ExtractOilModel.Store.UserInfoRoleInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserInfoRoleInfo">
+        <PropertyRef Name="UserInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInfoRoleInfo_RoleInfo">
+    <End Role="UserInfoRoleInfo" Type="ExtractOilModel.Store.UserInfoRoleInfo" Multiplicity="*" />
+    <End Role="RoleInfo" Type="ExtractOilModel.Store.RoleInfo" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="RoleInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserInfoRoleInfo">
+        <PropertyRef Name="RoleInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActionInfoRoleInfo_ActionInfo">
+    <End Role="ActionInfo" Type="ExtractOilModel.Store.ActionInfo" Multiplicity="1" />
+    <End Role="ActionInfoRoleInfo" Type="ExtractOilModel.Store.ActionInfoRoleInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActionInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ActionInfoRoleInfo">
+        <PropertyRef Name="ActionInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ActionInfoRoleInfo_RoleInfo">
+    <End Role="ActionInfoRoleInfo" Type="ExtractOilModel.Store.ActionInfoRoleInfo" Multiplicity="*" />
+    <End Role="RoleInfo" Type="ExtractOilModel.Store.RoleInfo" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="RoleInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ActionInfoRoleInfo">
+        <PropertyRef Name="RoleInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepartmentUserInfo_Department">
+    <End Role="Department" Type="ExtractOilModel.Store.Department" Multiplicity="1" />
+    <End Role="DepartmentUserInfo" Type="ExtractOilModel.Store.DepartmentUserInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DepartmentUserInfo">
+        <PropertyRef Name="Department_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepartmentUserInfo_UserInfo">
+    <End Role="DepartmentUserInfo" Type="ExtractOilModel.Store.DepartmentUserInfo" Multiplicity="*" />
+    <End Role="UserInfo" Type="ExtractOilModel.Store.UserInfo" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="UserInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DepartmentUserInfo">
+        <PropertyRef Name="UserInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepartmentActionInfo_Department">
+    <End Role="Department" Type="ExtractOilModel.Store.Department" Multiplicity="1" />
+    <End Role="DepartmentActionInfo" Type="ExtractOilModel.Store.DepartmentActionInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DepartmentActionInfo">
+        <PropertyRef Name="Department_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepartmentActionInfo_ActionInfo">
+    <End Role="DepartmentActionInfo" Type="ExtractOilModel.Store.DepartmentActionInfo" Multiplicity="*" />
+    <End Role="ActionInfo" Type="ExtractOilModel.Store.ActionInfo" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="ActionInfo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DepartmentActionInfo">
+        <PropertyRef Name="ActionInfo_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ExtractOilModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ExtractOilEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="UserInfo" EntityType="ExtractOilModel.UserInfo" />
+          <EntitySet Name="RoleInfo" EntityType="ExtractOilModel.RoleInfo" />
+          <EntitySet Name="Department" EntityType="ExtractOilModel.Department" />
+          <EntitySet Name="R_UserInfo_ActionInfo" EntityType="ExtractOilModel.R_UserInfo_ActionInfo" />
+          <AssociationSet Name="UserInfoRoleInfo" Association="ExtractOilModel.UserInfoRoleInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="RoleInfo" EntitySet="RoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="R_UserInfo_ActionInfoUserInfo" Association="ExtractOilModel.R_UserInfo_ActionInfoUserInfo">
+            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+            <End Role="UserInfo" EntitySet="UserInfo" />
+          </AssociationSet>
+          <EntitySet Name="ActionInfo" EntityType="ExtractOilModel.ActionInfo" />
+          <AssociationSet Name="R_UserInfo_ActionInfoActionInfo" Association="ExtractOilModel.R_UserInfo_ActionInfoActionInfo">
+            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="ActionInfoRoleInfo" Association="ExtractOilModel.ActionInfoRoleInfo">
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+            <End Role="RoleInfo" EntitySet="RoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="DepartmentUserInfo" Association="ExtractOilModel.DepartmentUserInfo">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="UserInfo" EntitySet="UserInfo" />
+          </AssociationSet>
+          <AssociationSet Name="DepartmentActionInfo" Association="ExtractOilModel.DepartmentActionInfo">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="UserInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Pwd" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SubTime" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DelFlag" Type="Boolean" Nullable="false" />
+          <Property Name="ModifiedOn" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Remark" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="RoleInfo" Relationship="ExtractOilModel.UserInfoRoleInfo" FromRole="UserInfo" ToRole="RoleInfo" />
+          <NavigationProperty Name="R_UserInfo_ActionInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoUserInfo" FromRole="UserInfo" ToRole="R_UserInfo_ActionInfo" />
+          <NavigationProperty Name="Department" Relationship="ExtractOilModel.DepartmentUserInfo" FromRole="UserInfo" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="RoleInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="RoleName" Nullable="false" />
+          <Property Type="String" Name="DelFlag" Nullable="false" />
+          <Property Type="DateTime" Name="SubTime" Nullable="false" />
+          <Property Type="String" Name="Remark" Nullable="false" />
+          <Property Type="DateTime" Name="ModifiedOn" Nullable="false" />
+          <Property Type="String" Name="Sort" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="ExtractOilModel.UserInfoRoleInfo" FromRole="RoleInfo" ToRole="UserInfo" />
+          <NavigationProperty Name="ActionInfo" Relationship="ExtractOilModel.ActionInfoRoleInfo" FromRole="RoleInfo" ToRole="ActionInfo" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DepName" Nullable="false" />
+          <Property Type="String" Name="ParentId" Nullable="false" />
+          <Property Type="String" Name="TreePath" Nullable="false" />
+          <Property Type="String" Name="Level" Nullable="false" />
+          <Property Type="String" Name="IsLeaf" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="ExtractOilModel.DepartmentUserInfo" FromRole="Department" ToRole="UserInfo" />
+          <NavigationProperty Name="ActionInfo" Relationship="ExtractOilModel.DepartmentActionInfo" FromRole="Department" ToRole="ActionInfo" />
+        </EntityType>
+        <EntityType Name="R_UserInfo_ActionInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="UserInfoID" Nullable="false" />
+          <Property Type="String" Name="ActionInfoID" Nullable="false" />
+          <Property Type="String" Name="IsPass" Nullable="false" />
+          <NavigationProperty Name="UserInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoUserInfo" FromRole="R_UserInfo_ActionInfo" ToRole="UserInfo" />
+          <NavigationProperty Name="ActionInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoActionInfo" FromRole="R_UserInfo_ActionInfo" ToRole="ActionInfo" />
+        </EntityType>
+        <Association Name="UserInfoRoleInfo">
+          <End Type="ExtractOilModel.UserInfo" Role="UserInfo" Multiplicity="*" />
+          <End Type="ExtractOilModel.RoleInfo" Role="RoleInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="R_UserInfo_ActionInfoUserInfo">
+          <End Type="ExtractOilModel.R_UserInfo_ActionInfo" Role="R_UserInfo_ActionInfo" Multiplicity="*" />
+          <End Type="ExtractOilModel.UserInfo" Role="UserInfo" Multiplicity="1" />
+        </Association>
+        <EntityType Name="ActionInfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SubTime" Nullable="false" />
+          <Property Type="String" Name="DelFlag" Nullable="false" />
+          <Property Type="String" Name="ModifiedOn" Nullable="false" />
+          <Property Type="String" Name="Remark" Nullable="false" />
+          <Property Type="String" Name="Url" Nullable="false" />
+          <Property Type="String" Name="HttpMethod" Nullable="false" />
+          <Property Type="String" Name="ActionMethod" Nullable="false" />
+          <Property Type="String" Name="ControllerName" Nullable="false" />
+          <Property Type="String" Name="ActionInfoName" Nullable="false" />
+          <Property Type="String" Name="MenuIcon" Nullable="false" />
+          <Property Type="String" Name="IconWidth" Nullable="false" />
+          <Property Type="String" Name="IconHeight" Nullable="false" />
+          <NavigationProperty Name="R_UserInfo_ActionInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoActionInfo" FromRole="ActionInfo" ToRole="R_UserInfo_ActionInfo" />
+          <NavigationProperty Name="RoleInfo" Relationship="ExtractOilModel.ActionInfoRoleInfo" FromRole="ActionInfo" ToRole="RoleInfo" />
+          <NavigationProperty Name="Department" Relationship="ExtractOilModel.DepartmentActionInfo" FromRole="ActionInfo" ToRole="Department" />
+        </EntityType>
+        <Association Name="R_UserInfo_ActionInfoActionInfo">
+          <End Type="ExtractOilModel.R_UserInfo_ActionInfo" Role="R_UserInfo_ActionInfo" Multiplicity="*" />
+          <End Type="ExtractOilModel.ActionInfo" Role="ActionInfo" Multiplicity="1" />
+        </Association>
+        <Association Name="ActionInfoRoleInfo">
+          <End Type="ExtractOilModel.ActionInfo" Role="ActionInfo" Multiplicity="*" />
+          <End Type="ExtractOilModel.RoleInfo" Role="RoleInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="DepartmentUserInfo">
+          <End Type="ExtractOilModel.Department" Role="Department" Multiplicity="*" />
+          <End Type="ExtractOilModel.UserInfo" Role="UserInfo" Multiplicity="*" />
+        </Association>
+        <Association Name="DepartmentActionInfo">
+          <End Type="ExtractOilModel.Department" Role="Department" Multiplicity="*" />
+          <End Type="ExtractOilModel.ActionInfo" Role="ActionInfo" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExtractOilModelStoreContainer" CdmEntityContainer="ExtractOilEntities">
+    <EntitySetMapping Name="UserInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.UserInfo)">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Pwd" ColumnName="Pwd" />
+          <ScalarProperty Name="SubTime" ColumnName="SubTime" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.RoleInfo)">
+        <MappingFragment StoreEntitySet="RoleInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="SubTime" ColumnName="SubTime" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.Department)">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DepName" ColumnName="DepName" />
+          <ScalarProperty Name="ParentId" ColumnName="ParentId" />
+          <ScalarProperty Name="TreePath" ColumnName="TreePath" />
+          <ScalarProperty Name="Level" ColumnName="Level" />
+          <ScalarProperty Name="IsLeaf" ColumnName="IsLeaf" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R_UserInfo_ActionInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.R_UserInfo_ActionInfo)">
+        <MappingFragment StoreEntitySet="R_UserInfo_ActionInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="UserInfoID" ColumnName="UserInfoID" />
+          <ScalarProperty Name="ActionInfoID" ColumnName="ActionInfoID" />
+          <ScalarProperty Name="IsPass" ColumnName="IsPass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActionInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.ActionInfo)">
+        <MappingFragment StoreEntitySet="ActionInfo">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SubTime" ColumnName="SubTime" />
+          <ScalarProperty Name="DelFlag" ColumnName="DelFlag" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="HttpMethod" ColumnName="HttpMethod" />
+          <ScalarProperty Name="ActionMethod" ColumnName="ActionMethod" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="ActionInfoName" ColumnName="ActionInfoName" />
+          <ScalarProperty Name="MenuIcon" ColumnName="MenuIcon" />
+          <ScalarProperty Name="IconWidth" ColumnName="IconWidth" />
+          <ScalarProperty Name="IconHeight" ColumnName="IconHeight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UserInfoRoleInfo" TypeName="ExtractOilModel.UserInfoRoleInfo" StoreEntitySet="UserInfoRoleInfo">
+      <EndProperty Name="UserInfo">
+        <ScalarProperty Name="ID" ColumnName="UserInfo_ID" />
+      </EndProperty>
+      <EndProperty Name="RoleInfo">
+        <ScalarProperty Name="ID" ColumnName="RoleInfo_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="R_UserInfo_ActionInfoUserInfo" TypeName="ExtractOilModel.R_UserInfo_ActionInfoUserInfo" StoreEntitySet="R_UserInfo_ActionInfo">
+      <EndProperty Name="UserInfo">
+        <ScalarProperty Name="ID" ColumnName="UserInfo_ID" />
+      </EndProperty>
+      <EndProperty Name="R_UserInfo_ActionInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="R_UserInfo_ActionInfoActionInfo" TypeName="ExtractOilModel.R_UserInfo_ActionInfoActionInfo" StoreEntitySet="R_UserInfo_ActionInfo">
+      <EndProperty Name="ActionInfo">
+        <ScalarProperty Name="ID" ColumnName="ActionInfo_ID" />
+      </EndProperty>
+      <EndProperty Name="R_UserInfo_ActionInfo">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ActionInfoRoleInfo" TypeName="ExtractOilModel.ActionInfoRoleInfo" StoreEntitySet="ActionInfoRoleInfo">
+      <EndProperty Name="ActionInfo">
+        <ScalarProperty Name="ID" ColumnName="ActionInfo_ID" />
+      </EndProperty>
+      <EndProperty Name="RoleInfo">
+        <ScalarProperty Name="ID" ColumnName="RoleInfo_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DepartmentUserInfo" TypeName="ExtractOilModel.DepartmentUserInfo" StoreEntitySet="DepartmentUserInfo">
+      <EndProperty Name="Department">
+        <ScalarProperty Name="ID" ColumnName="Department_ID" />
+      </EndProperty>
+      <EndProperty Name="UserInfo">
+        <ScalarProperty Name="ID" ColumnName="UserInfo_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DepartmentActionInfo" TypeName="ExtractOilModel.DepartmentActionInfo" StoreEntitySet="DepartmentActionInfo">
+      <EndProperty Name="Department">
+        <ScalarProperty Name="ID" ColumnName="Department_ID" />
+      </EndProperty>
+      <EndProperty Name="ActionInfo">
+        <ScalarProperty Name="ID" ColumnName="ActionInfo_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

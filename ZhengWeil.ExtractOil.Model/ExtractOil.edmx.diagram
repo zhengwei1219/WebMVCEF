@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af779992964a4fd1b1855110a15332bf" Name="关系图1" ZoomLevel="82">
+        <EntityTypeShape EntityType="ExtractOilModel.UserInfo" Width="1.5" PointX="1.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ExtractOilModel.RoleInfo" Width="1.5" PointX="4.375" PointY="3.125" />
+        <EntityTypeShape EntityType="ExtractOilModel.Department" Width="1.5" PointX="8.5" PointY="1.875" />
+        <EntityTypeShape EntityType="ExtractOilModel.R_UserInfo_ActionInfo" Width="1.5" PointX="0.5" PointY="6.5" />
+        <AssociationConnector Association="ExtractOilModel.UserInfoRoleInfo" />
+        <AssociationConnector Association="ExtractOilModel.R_UserInfo_ActionInfoUserInfo" />
+        <EntityTypeShape EntityType="ExtractOilModel.ActionInfo" Width="1.5" PointX="6.875" PointY="5.125" />
+        <AssociationConnector Association="ExtractOilModel.R_UserInfo_ActionInfoActionInfo" />
+        <AssociationConnector Association="ExtractOilModel.ActionInfoRoleInfo" />
+        <AssociationConnector Association="ExtractOilModel.DepartmentUserInfo" />
+        <AssociationConnector Association="ExtractOilModel.DepartmentActionInfo" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5BF08321-C7E6-4DF0-9596-13A0424D67D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZhengWei.ExtractOil.BLL</RootNamespace>
+    <AssemblyName>ZhengWei.ExtractOil.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionInfoService.cs" />
+    <Compile Include="BaseService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleInfoService.cs" />
+    <Compile Include="UserInfoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZhengWei.ExtractOil.DALFactory\ZhengWei.ExtractOil.DALFactory.csproj">
+      <Project>{2c164192-2631-42cf-92c8-12505b083144}</Project>
+      <Name>ZhengWei.ExtractOil.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZhengWei.ExtractOil.DAL\ZhengWei.ExtractOil.DAL.csproj">
+      <Project>{d22cf8f6-1321-466e-ae78-61fa88775e23}</Project>
+      <Name>ZhengWei.ExtractOil.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZhengWei.ExtractOil.IBLL\ZhengWei.ExtractOil.IBLL.csproj">
+      <Project>{6a0cc0e5-4556-46a2-98fd-b41709945817}</Project>
+      <Name>ZhengWei.ExtractOil.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZhengWei.ExtractOil.IDAL\ZhengWei.ExtractOil.IDAL.csproj">
+      <Project>{8e682130-35da-46a2-870a-82f21cb50160}</Project>
+      <Name>ZhengWei.ExtractOil.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZhengWeil.ExtractOil.Model\ZhengWeil.ExtractOil.Model.csproj">
+      <Project>{20c7ae7b-e296-4eab-8ec3-d229b3abb8cd}</Project>
+      <Name>ZhengWeil.ExtractOil.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

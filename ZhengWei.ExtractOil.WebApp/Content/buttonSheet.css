@@ -1,0 +1,103 @@
+﻿
+.tlistdiv #btnExportDatas
+{
+    /*padding-left: 10px;*/
+    display: none;
+}
+
+.tlistdiv #GriddvToolsbar
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.tlistdiv #GriddvToolsbarapp
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.tlistdiv #dvToolsbarapp
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.toolsbar #dvToolsbarapp
+{
+    padding-left: 10px;
+}
+
+.tlistdiv #dvToolsbar
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.toolsbar #dvToolsbar
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.tlistdiv #btnExportDatas1
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.tlistdiv #GriddvToolsbar1
+{
+    padding-left: 10px;
+    display: none;
+}
+
+.tlistdiv #GriddvToolsbarapp1
+{
+    padding-left: 10px;
+    display: none;
+}
+
+/*.tlistdiv #btnSetDimensions1
+{
+    padding-left: 10px;
+}*/
+#dvToolsbar
+{
+    padding-left: 10px;
+    display: none;
+}
+
+#showhelp img
+{
+    margin-top: -1px;
+}
+
+.tlistdiv
+{
+    padding-right: 20px;
+}
+#btQR
+{
+    padding-left: 10px;
+}
+#SpanSetDimensions
+{
+    padding-left: 10px;
+}
+#btnSetDimensions
+{
+    padding-left: 10px;
+}
+/*#file_upload
+{
+    color:#ffffff;
+    border:1px solid #cccccc;
+    border-color:#002a80;
+    background-color:#006dcc;
+}
+#file_upload1
+{
+     border-color:#002a80;
+    background-color:#006dcc;
+}*/

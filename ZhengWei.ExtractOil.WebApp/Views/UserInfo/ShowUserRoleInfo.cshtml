@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+}
+@using ZhengWeil.ExtractOil.Model;
+@using ZhengWei.ExtractOil.BLL
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>为用户分配角色</title>
+    <script type="text/javascript">
+        function subForm() {
+            $("#setUserRoleForm").submit();
+        }
+        function afterSet(data) {
+            window.parent.afterSetUserRole(data);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        设置用户@{UserInfo userInfo = (UserInfo)ViewBag.UserInfo;<span style="font-size:18px;color:red">@userInfo.Name</span>}角色信息
+        @{
+            using(Ajax.BeginForm("SaveUserRoleInfo","UserInfo",new{},new AjaxOptions(){OnSuccess="afterSet",HttpMethod="post"},new{id="setUserRoleForm"})){
+                <input type="hidden" name="userId" value="@userInfo.ID" />
+                List<RoleInfo> allRole = (List<RoleInfo>)ViewBag.AllRole;
+                List<RoleInfo> exitUserInfo = (List<RoleInfo>)ViewBag.ExitUserRole;
+            foreach (RoleInfo item in allRole)
+            {
+                RoleInfo roleInfo = item;
+                string roleId = "abc" + roleInfo.ID;
+                if(exitUserInfo.Contains(roleInfo))
+                {
+                    
+                   <input type="checkbox" name="@roleId" value="@roleInfo.ID" checked="checked"/>@roleInfo.RoleName
+                }
+                else
+                {
+                   <input type="checkbox" name="@roleId" value="@roleInfo.ID"/>@roleInfo.RoleName
+                }
+            }
+            }}
+
+    </div>
+</body>
+</html>

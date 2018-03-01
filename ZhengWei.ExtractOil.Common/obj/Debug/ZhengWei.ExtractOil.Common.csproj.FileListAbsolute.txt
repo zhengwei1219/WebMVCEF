@@ -1,0 +1,7 @@
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.csprojResolveAssemblyReference.cache
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\bin\Debug\ZhengWei.ExtractOil.Common.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\bin\Debug\ZhengWei.ExtractOil.Common.pdb
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\bin\Debug\Newtonsoft.Json.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\bin\Debug\Newtonsoft.Json.xml
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.dll
+F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.pdb

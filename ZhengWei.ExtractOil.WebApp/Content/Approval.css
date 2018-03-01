@@ -1,0 +1,309 @@
+﻿
+/*以下是立项详细信息页面和立项办理页面样式*/
+.EaDetails_h3
+{
+	font-weight:bold;
+	color:Navy;
+	text-align:center;
+	padding-top:20px;
+	width:100%;
+	background:#fff url(../images/titleright.jpg) no-repeat top right;
+	border-bottom:2px #9BC2ED solid;
+}
+
+
+
+#EaMainInfo table
+{
+	border-collapse:collapse;
+}
+
+.EaDetails td
+{
+	padding:3px;
+}
+.EaDetailsTitle
+{
+	font-weight:bold ;
+	color:#0005AC;
+	padding-left:20px;
+	background:#F3F7FD;
+	text-align:center;
+	border-bottom: #B7CDE4 2px double;
+	/*width:60%; 
+	height:17px; 
+	font-size:14px;
+	margin:0; 
+	background:#8CBCEB;
+	color:#0005AC;
+	font-weight:bold ;
+	border-top:1px #B7CDE4 solid;
+	padding-top:5px;
+	padding-bottom:5px;*/
+}
+
+.EaDetailItemName
+{
+	font-weight:bold ;
+	color:#3b6798;
+	border:1px #B7CDE4 solid;
+	background:#cadef4;
+	width:100px;
+	white-space : nowrap;
+}
+.EaDetailItemValue
+{
+	vertical-align:middle;
+	text-align:left;
+	border:1px #B7CDE4 solid;
+}
+
+.EaDetails input
+{
+	padding-left:2px;
+	border:0px #B7CDE4;
+	background:transparent;
+}
+
+
+.SolutionGridView
+{
+	text-align:left;
+	border:0;
+	width:100%;
+}
+
+.SolutionGridView th
+{
+	background-color:#F3F7FD;
+	padding:5px 5px 5px 5px;
+	border-top:1px #B7CDE4 solid;
+	color:Navy;
+}
+
+/*立项工具栏中的样式*/
+.toolSpan
+{
+	text-align:left;
+	border-bottom:1px solid #cadef4;
+	padding:7px 0px 4px 5px;
+	vertical-align:middle;
+}
+
+.toolSpan a:hover
+{
+	text-decoration:underline;
+}
+
+.processbar
+{
+	background:url(../images/i_process.gif) no-repeat 0px center;
+}
+
+.viewbar
+{
+	background:url(../images/i_view.gif) no-repeat  0px center;
+}
+.printbar
+{
+	background:url(../images/i_print.gif) no-repeat  0px center;
+}
+.attachmentbar
+{
+	background:url(../images/i_attachment.gif) no-repeat  0px center;
+}
+
+#tasklistcontainer
+{
+	padding:10px;
+	width:auto;
+	height:100%;
+}
+
+div.rounded
+{
+	margin-top:10px;
+}
+
+div.tasklisttitle { 
+background: url(../images/bg-1.gif) no-repeat top left; 
+color:#333399;
+font: 14px ;
+font-weight:bold;
+height:30px;
+text-align:left;
+height:23px;
+padding-left:10px;
+}
+
+div.tasklisttitle div { 
+background: url(../images/bg-1.gif) no-repeat top right; 
+height:23px;
+width:12px;
+float:right;
+}
+div.tasklisttitle span
+{
+	margin-top:5px;
+	height:20;
+}
+.tasklist
+{
+	width:100%;
+	text-align:left;
+	border-style:solid;
+	border-width:1px;
+	border-color:#497199;
+	border-collapse:collapse;
+	margin-bottom:10px;
+}
+
+.tasklist th
+{
+background:url(../images/thbg.gif) repeat-x top;
+background-color:#ffffff;
+font-size:13px;	
+text-align:center;
+border:solid 1px #497199;
+height:20px;
+padding-top:5px;
+white-space:nowrap;
+}
+.tasklist td
+{
+	background-color:#ffffff;
+	border:solid 1px #497199;
+	font-size:12px;
+	height:20px;
+	text-align:center;
+}
+/*---------------------团组相关的工具条的样式----------------*/
+div.grouptools
+{
+	width:100%;
+	text-align:left;
+	font-size:12px;
+	padding:5px 0 5px 5px;
+	background-color:White;
+}
+div.grouptools ul,div.grouptools li
+{
+	margin:0;
+	list-style-type:none;
+	margin-top:5px;
+	height:30px;
+}
+div.grouptools ul li a
+{
+	width:100%;
+	padding-left:3px 3px 3px 5px;
+}
+
+div.grouptools a:link,div.grouptools a:visited
+{
+	background-image:url(../images/tab_light_bg.gif);
+	background-position:left -1px;
+	padding:2px;
+	color:black;
+}
+
+div.grouptools a.disabled:hover,div.grouptools a.disabled:active
+{
+	border:1px solid #e6eeee;
+	background-color:Transparent;
+}
+
+div.grouptools a.selected:link,div.grouptools a.selected:visited,
+div.grouptools a.selected:hover,div.grouptools a.selected:active
+{
+	background-image: url(../images/tab_dark_bg.gif);
+	color:#ec6401;
+}
+
+div.grouptools span
+{
+	position:relative;
+	top:-3px;
+	margin-left:5px;
+}
+div.grouptools a:hover,div.grouptools a:active
+{
+	background-image: url(../images/tab_dark_bg.gif);
+	color:#ec6401;
+}
+
+div.reminderinfo
+{
+	margin:30px 5px 10px 5px;
+	padding:5px;
+	padding:2px;
+	background-color: #b8daf3;
+}
+div.reminderinfo .remindertitle
+{
+	padding:3px 3px 3px 25px;
+	font-weight:bolder;
+	background:url("../images/reminder.gif") 3px no-repeat;
+}
+div.reminderinfo p
+{
+	font-size:11px;
+	margin:0;
+	line-height:130%;
+	color:black;
+	background-color:White;
+	padding:5px;
+}
+div.reminderinfo p.errorinfo
+{
+	color:#ec6401;
+}
+div.reminderinfo p strong
+{
+	padding:0 5px;
+	font-size:13px;
+}
+
+/*-------end--------------团组相关的工具条的样式----------------*/
+
+div.clearfooter,div.footer
+{
+	border:0px;
+}
+div.footer p
+{
+	font-size:12px;
+	text-align:center;
+	color:darkblue;
+	margin:0;
+}
+
+/*----------------------机票信息显示为tip的时候--------------*/
+div.ticketmemo
+{
+	color:darkblue;
+}
+
+/*-------------------审批日志-----------------------*/
+tr.recordcanceled td
+{
+	text-decoration:line-through;
+}
+
+ a.linkButton:link, a.linkButton:visited, a.linkButton:hover
+{
+	text-align:center;font-size:9pt;margin:5px 0 0 10px;padding-top:1px;color:#114060; width:98px;height:22px; line-height:22px; text-decoration:none;border:1px;  background:url(../images/linkbg.gif);background-repeat:no-repeat;background-position:0px -65px
+}
+ a.linkButton:hover
+{
+	background-position:0px -87px
+}
+ a.shortlinkButton:link, a.shortlinkButton:visited, a.shortlinkButton:hover
+{
+	text-align:center;font-size:9pt;margin:5px 0 0 10px;padding-top:1px;color:#114060; width:66px;height:20px; line-height:20px; text-decoration:none;border:1px;  background:url(../images/linkbg.gif);background-repeat:no-repeat;background-position:0 0
+}
+ a.shortlinkButton:hover
+{
+	background-position:0px -22px
+}
+
