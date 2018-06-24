@@ -17,9 +17,9 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-    <IISExpressUseClassicPipelineMode />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>true</IISExpressUseClassicPipelineMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -143,7 +143,9 @@
     <Compile Include="Controllers\FileUploadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ReplyController.cs" />
     <Compile Include="Controllers\RoleInfoController.cs" />
+    <Compile Include="Controllers\TopicsController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Filters\MyExceptionAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -210,6 +212,7 @@
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bq.gif" />
     <Content Include="Content\buttonSheet.css" />
     <Content Include="Content\chosen-sprite%402x.png" />
     <Content Include="Content\chosen-sprite.png" />
@@ -220,10 +223,12 @@
     <Content Include="Content\images\7_7.jpg" />
     <Content Include="Content\images\Alien Folder.png" />
     <Content Include="Content\images\applebg.jpg" />
+    <Content Include="Content\images\bg.gif" />
     <Content Include="Content\images\bg.png" />
     <Content Include="Content\images\bg3.png" />
     <Content Include="Content\images\big.png" />
     <Content Include="Content\images\blue_glow.jpg" />
+    <Content Include="Content\images\bq.gif" />
     <Content Include="Content\images\cancel.png" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
@@ -885,6 +890,7 @@
     <Content Include="Content\themes\metro\tree.css" />
     <Content Include="Content\themes\metro\validatebox.css" />
     <Content Include="Content\themes\metro\window.css" />
+    <Content Include="Content\Topic_style.css" />
     <Content Include="Content\ui.daterangepicker.css" />
     <Content Include="Content\ui.jqgrid.css" />
     <Content Include="Content\upload.css" />
@@ -908,6 +914,7 @@
     <Content Include="Images\bt_bg.gif" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\calendar.gif" />
+    <Content Include="Images\cancel.png" />
     <Content Include="Images\chosen-sprite.png" />
     <Content Include="Images\close.png" />
     <Content Include="Images\closebutton.gif" />
@@ -988,6 +995,7 @@
     <Content Include="Images\tzd.gif" />
     <Content Include="Images\unapp.png" />
     <Content Include="Images\unsubmit.png" />
+    <Content Include="Images\upload.png" />
     <Content Include="Images\well.gif" />
     <Content Include="Images\window.gif" />
     <Content Include="Images\window_header_bg.gif" />
@@ -1020,6 +1028,7 @@
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.uploadify.js" />
+    <Content Include="Scripts\jquery.uploadify.v2.1.4.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -1027,6 +1036,9 @@
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
     <Content Include="Scripts\knockout-2.1.0.js" />
     <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\swfobject.js" />
+    <Content Include="Scripts\uploadify.css" />
+    <Content Include="Scripts\uploadify.swf" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1053,6 +1065,9 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\UserInfo\ShowUserRoleInfo.cshtml" />
     <Content Include="Views\ActionInfo\Index.cshtml" />
+    <Content Include="Views\Topics\Index.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\FileUpload\DocumentNoFulsh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -11,6 +11,8 @@ namespace ZhengWei.ExtractOil.IDAL
        IUserInfoDal UserInfoDal { get; set; }
        IRoleInfoDal RoleInfoDal { get; set; }
        IActionInfoDal ActionInfoDal { get; set; }
+       IReplysDal ReplysDal { get; set; }
+       ITopicsDal TopicsDal { get; set; }
        bool SaveChanges();
     }
 }

@@ -50,6 +50,14 @@ namespace ZhengWei.ExtractOil.WebApp.Controllers
             return filename;
         }
 
+        /// <summary>
+        /// 无刷新文件上传
+        /// </summary>
+        /// <returns></returns>
+        public ViewResult DocumentNoFulsh()
+        {
+            return View();
+        }
 
     }
 }

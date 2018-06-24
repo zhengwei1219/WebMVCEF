@@ -1,0 +1,46 @@
+﻿body 
+{
+    text-align:center;
+    font-size: 12px;
+    margin:0px;
+    color:#666666;
+}
+INPUT {
+	BACKGROUND-COLOR:  #f8f8f8; BORDER-BOTTOM: #9a9999 1px solid;BORDER-LEFT: #9a9999 1px solid; BORDER-RIGHT: #9a9999 1px solid; BORDER-TOP:#9a9999 1px solid; FONT-SIZE: 9pt;
+}
+TEXTAREA {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 3px; BORDER-RIGHT-WIDTH: 1px
+}
+SELECT {
+	BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 12px; BORDER-BOTTOM-WIDTH: 1px; BORDER-RIGHT-WIDTH: 1px;
+}
+A:link {
+	COLOR: #003051; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #003051; TEXT-DECORATION: none
+}
+A:hover { color:#2175bc;text-decoration:underline; }
+Div#postMsg{text-align:left;width:400px; border: solid 1px #5986A5; display:none;}
+Div#postMsg dl{ margin:0px; padding:0px;}
+Div#postMsg dl dd{ margin-left:5px;}
+dd.postHead { text-align:center; padding:3px; margin:3px; background-color: Blue; color:White; font-weight:bold;}
+dd.postFoot { text-align: center;}
+Div#msg { width:400px; text-align:left; height:16px; margin:2px; padding-left:5px; padding-top:4px; background-color: #FFFFE7; display:none; border: solid 1px #666666;}
+#pager
+{
+    text-align: right;
+    padding: 4px;
+    margin-left: 0px;
+	margin-right: 0px;
+	background-color: #79A0B8;
+}
+Div#msgList{text-align:left;width:400px; border: solid 1px #5986A5;}
+Div#msgList dt{ padding:3px; margin:3px; background-color: #5986A5; color:White; font-weight:bold;}
+Div#msgList dl{ margin:0px; padding:0px;}
+Div#msgList dl dd{ margin:10px;}
+Div#msgList dl#msgFoot dd{ background-color: #E7FEFF; margin: 5px; padding:5px; text-align:right;}
+Div#msgList dl#msgFoot dd.reply{ background-color:#EFF7FF; margin: 5px; padding:5px; display: none; text-align: left; border: solid 3px #ccc}
+Div#top { text-align:right; margin:3px; width:400px}
+Div#loginBar{margin:10px; padding:10px; border: solid 3px #ccc; width:300px; display:none;}
+.replyBody{ border-bottom:solid 2px #ccc;}

@@ -54,7 +54,31 @@ namespace ZhengWei.ExtractOil.DALFactory
            }
            set { _ActionInfoDal = value; }
        }
-
+       private IReplysDal _ReplysDal;
+       public IReplysDal ReplysDal
+       {
+           get
+           {
+               if (_ReplysDal == null)
+               {
+                   _ReplysDal = DALAbstractFactory.CreateReplysDal();
+               }
+               return _ReplysDal;
+           }
+           set { _ReplysDal = value; }
+       }
+       private ITopicsDal _TopicsDal;
+       public ITopicsDal TopicsDal
+       {
+           get {
+               if (_TopicsDal == null)
+               {
+                   _TopicsDal = DALAbstractFactory.CreateTopicsDal();
+               }
+               return _TopicsDal;
+           }
+           set { _TopicsDal = value; }
+       }
        /// <summary>
        /// 保存数据
        /// </summary>

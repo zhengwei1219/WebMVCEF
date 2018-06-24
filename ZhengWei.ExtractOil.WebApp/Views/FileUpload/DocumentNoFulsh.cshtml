@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+@*<link href="~/Content/chosen.css" rel="stylesheet" />*@
+<link href="~/Content/uploadify.css" rel="stylesheet" />
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+@*<script src="~/Scripts/chosen.jquery.js"></script>*@
+<script src="~/Scripts/swfobject.js"></script>
+<script src="~/Scripts/jquery.uploadify.js"></script>
+<script type="text/javascript">
+    var eaUrl = "~/upload/file";
+    $(function () {
+        initUploadify("uploadify", "fileQueue");
+    });
+    function initUploadify(id, queryId) {
+        $("#" + id).uploadify({
+            'uploader': '~/Scripts/uploadify.swf',
+            'script': '~/FileUpload/uploadDoc',
+            'cancelImg': '~/Images/cancel.png',
+            'folder': eaUrl + new Date().getFullYear().toString(),
+            'queueID': queryId,
+            'auto': true,
+            'multi': false,
+            'buttonText': escape('select....'),
+            'buttonImg': '~/Images/upload.png',
+            'wmode': 'transparent',
+            'fileSizeLimit': 2048,
+            'removeCompleted': false,
+            'onUploadError': function (event, queueID, fileObj) {
+                alert("文件:" + fileObj.name + "上传失败");
+            },
+            'onComplete': function (event, queueID, fileObj, response, data) {//上传成功执行
+                if (response != "") {
+                    //$j("#<%=hfFiles.ClientID %>").val(response);
+                    //ShowFiles($j("#fileDiv2"), queueID, eaUrl + new Date().getFullYear().toString());
+                }
+            }
+        });
+    }
+</script>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DocumentNoFulsh</title>
+</head>
+<body>
+    <div>
+        <div id='fileDiv'>
+        </div>
+        <div class='uploadifyDiv'>
+            <div id="fileQueue">
+            </div>
+            <input type="file" name="uploadify" id="uploadify" />
+            <span class="inputMesg">创建二级单位账号必须上传备案表</span>
+        </div>
+    </div>
+</body>
+</html>

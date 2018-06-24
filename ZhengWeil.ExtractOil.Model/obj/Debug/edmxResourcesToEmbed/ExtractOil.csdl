@@ -30,6 +30,12 @@
       <End Role="Department" EntitySet="Department" />
       <End Role="ActionInfo" EntitySet="ActionInfo" />
     </AssociationSet>
+    <EntitySet Name="Replys" EntityType="ExtractOilModel.Replys" />
+    <EntitySet Name="Topics" EntityType="ExtractOilModel.Topics" />
+    <AssociationSet Name="FK_Replys_Topics" Association="ExtractOilModel.FK_Replys_Topics">
+      <End Role="Topics" EntitySet="Topics" />
+      <End Role="Replys" EntitySet="Replys" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="UserInfo">
     <Key>
@@ -52,12 +58,12 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="RoleName" Nullable="false" />
-    <Property Type="String" Name="DelFlag" Nullable="false" />
-    <Property Type="DateTime" Name="SubTime" Nullable="false" />
-    <Property Type="String" Name="Remark" Nullable="false" />
-    <Property Type="DateTime" Name="ModifiedOn" Nullable="false" />
-    <Property Type="String" Name="Sort" Nullable="false" />
+    <Property Type="String" Name="RoleName" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="DelFlag" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="DateTime" Name="SubTime" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="DateTime" Name="ModifiedOn" Nullable="false" Precision="3" />
+    <Property Type="String" Name="Sort" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="UserInfo" Relationship="ExtractOilModel.UserInfoRoleInfo" FromRole="RoleInfo" ToRole="UserInfo" />
     <NavigationProperty Name="ActionInfo" Relationship="ExtractOilModel.ActionInfoRoleInfo" FromRole="RoleInfo" ToRole="ActionInfo" />
   </EntityType>
@@ -66,11 +72,11 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="DepName" Nullable="false" />
-    <Property Type="String" Name="ParentId" Nullable="false" />
-    <Property Type="String" Name="TreePath" Nullable="false" />
-    <Property Type="String" Name="Level" Nullable="false" />
-    <Property Type="String" Name="IsLeaf" Nullable="false" />
+    <Property Type="String" Name="DepName" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ParentId" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="TreePath" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Level" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="IsLeaf" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="UserInfo" Relationship="ExtractOilModel.DepartmentUserInfo" FromRole="Department" ToRole="UserInfo" />
     <NavigationProperty Name="ActionInfo" Relationship="ExtractOilModel.DepartmentActionInfo" FromRole="Department" ToRole="ActionInfo" />
   </EntityType>
@@ -79,9 +85,9 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="UserInfoID" Nullable="false" />
-    <Property Type="String" Name="ActionInfoID" Nullable="false" />
-    <Property Type="String" Name="IsPass" Nullable="false" />
+    <Property Type="String" Name="UserInfoID" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ActionInfoID" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="IsPass" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="UserInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoUserInfo" FromRole="R_UserInfo_ActionInfo" ToRole="UserInfo" />
     <NavigationProperty Name="ActionInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoActionInfo" FromRole="R_UserInfo_ActionInfo" ToRole="ActionInfo" />
   </EntityType>
@@ -98,18 +104,18 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="String" Name="SubTime" Nullable="false" />
-    <Property Type="String" Name="DelFlag" Nullable="false" />
-    <Property Type="String" Name="ModifiedOn" Nullable="false" />
-    <Property Type="String" Name="Remark" Nullable="false" />
-    <Property Type="String" Name="Url" Nullable="false" />
-    <Property Type="String" Name="HttpMethod" Nullable="false" />
-    <Property Type="String" Name="ActionMethod" Nullable="false" />
-    <Property Type="String" Name="ControllerName" Nullable="false" />
-    <Property Type="String" Name="ActionInfoName" Nullable="false" />
-    <Property Type="String" Name="MenuIcon" Nullable="false" />
-    <Property Type="String" Name="IconWidth" Nullable="false" />
-    <Property Type="String" Name="IconHeight" Nullable="false" />
+    <Property Type="String" Name="SubTime" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="DelFlag" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ModifiedOn" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Remark" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Url" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="HttpMethod" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ActionMethod" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ControllerName" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="ActionInfoName" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="MenuIcon" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="IconWidth" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="IconHeight" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="R_UserInfo_ActionInfo" Relationship="ExtractOilModel.R_UserInfo_ActionInfoActionInfo" FromRole="ActionInfo" ToRole="R_UserInfo_ActionInfo" />
     <NavigationProperty Name="RoleInfo" Relationship="ExtractOilModel.ActionInfoRoleInfo" FromRole="ActionInfo" ToRole="RoleInfo" />
     <NavigationProperty Name="Department" Relationship="ExtractOilModel.DepartmentActionInfo" FromRole="ActionInfo" ToRole="Department" />
@@ -129,5 +135,45 @@
   <Association Name="DepartmentActionInfo">
     <End Type="ExtractOilModel.Department" Role="Department" Multiplicity="*" />
     <End Type="ExtractOilModel.ActionInfo" Role="ActionInfo" Multiplicity="*" />
+  </Association>
+  <EntityType Name="Replys">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="TopicId" Nullable="false" />
+    <Property Type="DateTime" Name="ReplyDate" Precision="3" />
+    <Property Type="String" Name="Content" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ReplyName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserHostAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Topics" Relationship="ExtractOilModel.FK_Replys_Topics" FromRole="Replys" ToRole="Topics" />
+  </EntityType>
+  <EntityType Name="Topics">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Author" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="AddDate" Precision="3" />
+    <Property Type="String" Name="Content" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserHostAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="LastModifyDate" Precision="3" />
+    <NavigationProperty Name="Replys" Relationship="ExtractOilModel.FK_Replys_Topics" FromRole="Topics" ToRole="Replys" />
+  </EntityType>
+  <Association Name="FK_Replys_Topics">
+    <End Type="ExtractOilModel.Topics" Role="Topics" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ExtractOilModel.Replys" Role="Replys" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Topics">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Replys">
+        <PropertyRef Name="TopicId" />
+      </Dependent>
+    </ReferentialConstraint>
   </Association>
 </Schema>

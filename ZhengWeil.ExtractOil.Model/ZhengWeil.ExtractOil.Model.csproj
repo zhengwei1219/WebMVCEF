@@ -70,6 +70,9 @@
       <DependentUpon>ExtractOil.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Replys.cs">
+      <DependentUpon>ExtractOil.tt</DependentUpon>
+    </Compile>
     <Compile Include="RoleInfo.cs">
       <DependentUpon>ExtractOil.tt</DependentUpon>
     </Compile>
@@ -78,6 +81,9 @@
     </Compile>
     <Compile Include="Search\BaseSearch.cs" />
     <Compile Include="Search\UserInfoSearch.cs" />
+    <Compile Include="Topics.cs">
+      <DependentUpon>ExtractOil.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserInfo.cs">
       <DependentUpon>ExtractOil.tt</DependentUpon>
     </Compile>

@@ -33,6 +33,16 @@ namespace ZhengWei.ExtractOil.DALFactory
            string fullClassName = DalNameSpace + ".ActionInfoDal";
            return CreateInstance(fullClassName,DalAssembly) as IActionInfoDal;
        }
+       public static IReplysDal CreateReplysDal()
+       {
+           string fullClassName = DalNameSpace + ".ReplysDal";
+           return CreateInstance(fullClassName,DalAssembly) as IReplysDal;
+       }
+       public static ITopicsDal CreateTopicsDal()
+       {
+           string fullClassName = DalNameSpace + ".TopicsDal";
+           return CreateInstance(fullClassName, DalAssembly) as ITopicsDal;
+       }
        private static Object CreateInstance(string fullClassName, string DalAssembly)
        {
            

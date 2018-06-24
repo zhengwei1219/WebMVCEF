@@ -8,3 +8,13 @@ F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\E
 F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\ZhengWeil.ExtractOil.Model.pdb
 F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\EntityFramework.xml
 F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\ZhengWei.ExtractOil.IBLL.dll
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\ZhengWei.ExtractOil.IBLL.pdb
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\ZhengWeil.ExtractOil.Model.dll
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\EntityFramework.dll
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\ZhengWeil.ExtractOil.Model.pdb
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\EntityFramework.xml
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\obj\Debug\ZhengWei.ExtractOil.IBLL.csprojResolveAssemblyReference.cache
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\obj\Debug\ZhengWei.ExtractOil.IBLL.dll
+D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.IBLL\obj\Debug\ZhengWei.ExtractOil.IBLL.pdb

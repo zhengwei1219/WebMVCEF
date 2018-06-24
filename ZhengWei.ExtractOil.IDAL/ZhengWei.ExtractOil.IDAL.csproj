@@ -42,7 +42,9 @@
     <Compile Include="IActionInfoDal.cs" />
     <Compile Include="IBaseDal.cs" />
     <Compile Include="IDbSession.cs" />
+    <Compile Include="IReplysDal.cs" />
     <Compile Include="IRoleInfoDal.cs" />
+    <Compile Include="ITopicsDal.cs" />
     <Compile Include="IUserInfoDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

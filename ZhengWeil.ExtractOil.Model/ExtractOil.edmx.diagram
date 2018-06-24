@@ -16,6 +16,9 @@
         <AssociationConnector Association="ExtractOilModel.ActionInfoRoleInfo" />
         <AssociationConnector Association="ExtractOilModel.DepartmentUserInfo" />
         <AssociationConnector Association="ExtractOilModel.DepartmentActionInfo" />
+        <EntityTypeShape EntityType="ExtractOilModel.Replys" Width="1.5" PointX="12" PointY="5.75" />
+        <EntityTypeShape EntityType="ExtractOilModel.Topics" Width="1.5" PointX="0.243270088100466" PointY="1.7244919099493381" />
+        <AssociationConnector Association="ExtractOilModel.FK_Replys_Topics" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
