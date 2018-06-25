@@ -1060,7 +1060,7 @@
     <Content Include="Views\EchartsDome\PanelDome.cshtml" />
     <Content Include="Views\RoleInfo\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\FileUpload\Document.cshtml" />
+    <Content Include="Views\FileUpload\DocumentToPTF.cshtml" />
     <Content Include="Views\FileUpload\AddDoc.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\UserInfo\ShowUserRoleInfo.cshtml" />

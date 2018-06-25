@@ -11,7 +11,7 @@ namespace ZhengWei.ExtractOil.WebApp.Controllers
         //
         // GET: /FileUpload/
 
-        public ActionResult Document()
+        public ActionResult DocumentToPTF()
         {
             return View();
         }

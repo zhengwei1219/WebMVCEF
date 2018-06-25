@@ -6,17 +6,18 @@
     
    //string filePath = Url.Content("");
 }
+
 <script src="~/Scripts/jquery-1.7.1.min.js"></script>
 @*<script src="~/Scripts/jquery-ui-1.8.20.min.js"></script>*@
 <script src="~/Scripts/jquery-ui-1.10.2.js"></script>
-<script src="@Url.Content("~/Scripts/global.js")" ></script>
-<link href="@Url.Content("~/Content/chosen.css")" rel="stylesheet"  />
-<link href="@Url.Content("~/Content/uploadify.css")" rel="stylesheet"  />
-<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet"  />
-
-<script src="@Url.Content("~/Scripts/jquery.uploadify.js")" ></script>
+<script src="@Url.Content("~/Scripts/global.js")"></script>
+<link href="@Url.Content("~/Content/chosen.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/uploadify.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/jquery.uploadify.js")"></script>
 <script src="~/Scripts/DocFileUpload.js"></script>
 <script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script> 
+
 @using (Html.BeginForm("SaveDocumentInfo", "FileUpload", FormMethod.Post, new { id = "EditDocumentInfoForm", @class = "form-horizontal" }))
 { 
     <div class="well well-small">
@@ -55,6 +56,9 @@
     $(function () {
         InitDocUploadify();
     });
+    //window.onload(function () {
+    //    InitDocUploadify();
+    //});
 
     //上传
     function upload() {

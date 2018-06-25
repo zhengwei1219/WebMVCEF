@@ -1,0 +1,5 @@
+2018-06-24 20:08:41,378 [6] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
