@@ -42,6 +42,7 @@
     <Compile Include="IActionInfoDal.cs" />
     <Compile Include="IBaseDal.cs" />
     <Compile Include="IDbSession.cs" />
+    <Compile Include="IDocumentInfoDal.cs" />
     <Compile Include="IReplysDal.cs" />
     <Compile Include="IRoleInfoDal.cs" />
     <Compile Include="ITopicsDal.cs" />

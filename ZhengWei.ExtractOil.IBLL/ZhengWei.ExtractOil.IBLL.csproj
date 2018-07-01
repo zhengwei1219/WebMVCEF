@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="IActionInfoService.cs" />
     <Compile Include="IBaseService.cs" />
+    <Compile Include="IDocumentInfoService.cs" />
     <Compile Include="IReplysService.cs" />
     <Compile Include="IRoleInfoService.cs" />
     <Compile Include="ITopicsService.cs" />

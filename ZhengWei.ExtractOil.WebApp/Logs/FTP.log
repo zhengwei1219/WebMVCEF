@@ -3,3 +3,65 @@
  Error details: SSL policy requires SSL for control channel.
 534 End
 。
+2018-06-25 20:11:35,760 [8] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
+2018-06-25 20:20:03,075 [3] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
+2018-06-25 20:20:55,964 [14] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
+2018-06-25 20:21:47,573 [14] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
+2018-06-25 20:24:05,096 [15] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
+2018-06-25 20:27:19,233 [20] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (534) 534-Policy requires SSL.
+ Win32 error:   Access is denied. 
+ Error details: SSL policy requires SSL for control channel.
+534 End
+。
+2018-06-25 20:32:34,338 [8] INFO  FTPLogger FtpWeb MakeDir Success -->Maps 
+2018-06-25 20:33:02,482 [8] INFO  FTPLogger FtpWeb MakeDir Success -->2018 
+2018-06-25 20:33:26,757 [8] INFO  FTPLogger FtpWeb MakeDir Success -->06-25 
+2018-06-25 20:33:57,786 [8] INFO  FTPLogger FTP上传文件成功，文件名为：e906bb2e-2582-4e7f-8c16-fb527a46688f_git-bash.exe !
+2018-06-26 07:56:53,225 [456] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 07:56:53,249 [456] INFO  FTPLogger FtpWeb MakeDir Success -->2018 
+2018-06-26 07:56:53,258 [456] INFO  FTPLogger FtpWeb MakeDir Success -->06-26 
+2018-06-26 07:56:53,340 [456] INFO  FTPLogger FTP上传文件成功，文件名为：9ea83402-4618-43b4-8935-b9e457032ca7_iexplore.exe !
+2018-06-26 08:01:54,763 [7] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:01:54,949 [7] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:01:54,986 [7] INFO  FTPLogger FtpWeb MakeDir Success -->06-26 
+2018-06-26 08:01:55,007 [7] INFO  FTPLogger FTP上传文件成功，文件名为：daf61d09-9146-4493-8de1-b371b7acc598_git-bash.exe !
+2018-06-26 08:02:26,549 [9] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:02:26,722 [9] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:02:26,896 [9] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:02:26,916 [9] INFO  FTPLogger FTP上传文件成功，文件名为：ad2430fd-679c-4390-ae55-f0fbe0773361_QQScLauncher.exe !
+2018-06-26 08:19:47,049 [24] INFO  FTPLogger FtpWeb MakeDir Success -->Maps 
+2018-06-26 08:19:47,062 [24] INFO  FTPLogger FtpWeb MakeDir Success -->2018 
+2018-06-26 08:19:47,074 [24] INFO  FTPLogger FtpWeb MakeDir Success -->06-26 
+2018-06-26 08:19:47,130 [24] INFO  FTPLogger FTP上传文件成功，文件名为：15fdab53-d336-4b8f-a33d-4b629470443f_xiaolen.exe !
+2018-06-26 08:32:54,256 [3] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:32:54,284 [3] INFO  FTPLogger FtpWeb MakeDir Success -->2018 
+2018-06-26 08:32:54,328 [3] INFO  FTPLogger FtpWeb MakeDir Success -->06-26 
+2018-06-26 08:32:54,379 [3] INFO  FTPLogger FTP上传文件成功，文件名为：532236e4-99ee-4cab-a122-eeb0d83075c1_firefox.exe !
+2018-06-26 08:37:56,563 [13] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:37:56,812 [13] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:37:56,837 [13] INFO  FTPLogger FtpWeb MakeDir Success -->06-26 
+2018-06-26 08:37:56,897 [13] INFO  FTPLogger FTP上传文件成功，文件名为：3b1fbe81-dde9-45e9-9804-5b55436987f8_QQPCTray.exe !
+2018-06-26 08:38:29,290 [16] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:38:29,479 [16] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:38:29,673 [16] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2018-06-26 08:38:29,732 [16] INFO  FTPLogger FTP上传文件成功，文件名为：52ef079f-c043-429e-848d-e0bacc241706_git-bash.exe !

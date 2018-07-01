@@ -79,6 +79,19 @@ namespace ZhengWei.ExtractOil.DALFactory
            }
            set { _TopicsDal = value; }
        }
+       private IDocumentInfoDal _DocumentInfoDal;
+       public IDocumentInfoDal DocumentInfoDal
+       {
+           get
+           {
+               if (_DocumentInfoDal == null)
+               {
+                   _DocumentInfoDal = DALAbstractFactory.CreateDocumentInfoDal();
+               }
+               return _DocumentInfoDal;
+           }
+           set { _DocumentInfoDal = value; }
+       }
        /// <summary>
        /// 保存数据
        /// </summary>

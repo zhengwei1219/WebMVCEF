@@ -4,69 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ExtractOilModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="ExtractOilModelStoreContainer">
-          <EntitySet Name="ActionInfo" EntityType="ExtractOilModel.Store.ActionInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ActionInfoRoleInfo" EntityType="ExtractOilModel.Store.ActionInfoRoleInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Department" EntityType="ExtractOilModel.Store.Department" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DepartmentActionInfo" EntityType="ExtractOilModel.Store.DepartmentActionInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="DepartmentUserInfo" EntityType="ExtractOilModel.Store.DepartmentUserInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="R_UserInfo_ActionInfo" EntityType="ExtractOilModel.Store.R_UserInfo_ActionInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Replys" EntityType="ExtractOilModel.Store.Replys" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="RoleInfo" EntityType="ExtractOilModel.Store.RoleInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Topics" EntityType="ExtractOilModel.Store.Topics" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="UserInfo" EntityType="ExtractOilModel.Store.UserInfo" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="UserInfoRoleInfo" EntityType="ExtractOilModel.Store.UserInfoRoleInfo" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_ActionInfoRoleInfo_ActionInfo" Association="ExtractOilModel.Store.FK_ActionInfoRoleInfo_ActionInfo">
-            <End Role="ActionInfo" EntitySet="ActionInfo" />
-            <End Role="ActionInfoRoleInfo" EntitySet="ActionInfoRoleInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_ActionInfoRoleInfo_RoleInfo" Association="ExtractOilModel.Store.FK_ActionInfoRoleInfo_RoleInfo">
-            <End Role="RoleInfo" EntitySet="RoleInfo" />
-            <End Role="ActionInfoRoleInfo" EntitySet="ActionInfoRoleInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DepartmentActionInfo_ActionInfo" Association="ExtractOilModel.Store.FK_DepartmentActionInfo_ActionInfo">
-            <End Role="ActionInfo" EntitySet="ActionInfo" />
-            <End Role="DepartmentActionInfo" EntitySet="DepartmentActionInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DepartmentActionInfo_Department" Association="ExtractOilModel.Store.FK_DepartmentActionInfo_Department">
-            <End Role="Department" EntitySet="Department" />
-            <End Role="DepartmentActionInfo" EntitySet="DepartmentActionInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DepartmentUserInfo_Department" Association="ExtractOilModel.Store.FK_DepartmentUserInfo_Department">
-            <End Role="Department" EntitySet="Department" />
-            <End Role="DepartmentUserInfo" EntitySet="DepartmentUserInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DepartmentUserInfo_UserInfo" Association="ExtractOilModel.Store.FK_DepartmentUserInfo_UserInfo">
-            <End Role="UserInfo" EntitySet="UserInfo" />
-            <End Role="DepartmentUserInfo" EntitySet="DepartmentUserInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_R_UserInfo_ActionInfoActionInfo" Association="ExtractOilModel.Store.FK_R_UserInfo_ActionInfoActionInfo">
-            <End Role="ActionInfo" EntitySet="ActionInfo" />
-            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_R_UserInfo_ActionInfoUserInfo" Association="ExtractOilModel.Store.FK_R_UserInfo_ActionInfoUserInfo">
-            <End Role="UserInfo" EntitySet="UserInfo" />
-            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Replys_Topics" Association="ExtractOilModel.Store.FK_Replys_Topics">
-            <End Role="Topics" EntitySet="Topics" />
-            <End Role="Replys" EntitySet="Replys" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserInfoRoleInfo_RoleInfo" Association="ExtractOilModel.Store.FK_UserInfoRoleInfo_RoleInfo">
-            <End Role="RoleInfo" EntitySet="RoleInfo" />
-            <End Role="UserInfoRoleInfo" EntitySet="UserInfoRoleInfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserInfoRoleInfo_UserInfo" Association="ExtractOilModel.Store.FK_UserInfoRoleInfo_UserInfo">
-            <End Role="UserInfo" EntitySet="UserInfo" />
-            <End Role="UserInfoRoleInfo" EntitySet="UserInfoRoleInfo" />
-          </AssociationSet>
-        </EntityContainer>
+    <Schema Namespace="ExtractOilModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ActionInfo">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SubTime" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DelFlag" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ModifiedOn" Type="nvarchar(max)" Nullable="false" />
@@ -92,7 +35,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DepName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ParentId" Type="nvarchar(max)" Nullable="false" />
           <Property Name="TreePath" Type="nvarchar(max)" Nullable="false" />
@@ -115,11 +58,20 @@
           <Property Name="Department_ID" Type="int" Nullable="false" />
           <Property Name="UserInfo_ID" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="DocumentInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="1000" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+        </EntityType>
         <EntityType Name="R_UserInfo_ActionInfo">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserInfoID" Type="nvarchar(max)" Nullable="false" />
           <Property Name="ActionInfoID" Type="nvarchar(max)" Nullable="false" />
           <Property Name="IsPass" Type="nvarchar(max)" Nullable="false" />
@@ -130,7 +82,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TopicId" Type="int" Nullable="false" />
           <Property Name="ReplyDate" Type="datetime" />
           <Property Name="Content" Type="nvarchar" MaxLength="1000" />
@@ -141,7 +93,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="RoleName" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DelFlag" Type="nvarchar(max)" Nullable="false" />
           <Property Name="SubTime" Type="datetime" Nullable="false" />
@@ -153,8 +105,8 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Author" Type="nvarchar" MaxLength="20" />
           <Property Name="AddDate" Type="datetime" />
           <Property Name="Content" Type="nvarchar" MaxLength="1000" />
@@ -166,9 +118,9 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
-          <Property Name="Pwd" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pwd" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SubTime" Type="nvarchar" MaxLength="50" />
           <Property Name="DelFlag" Type="bit" Nullable="false" />
           <Property Name="ModifiedOn" Type="nvarchar" MaxLength="50" />
@@ -184,8 +136,8 @@
           <Property Name="RoleInfo_ID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_ActionInfoRoleInfo_ActionInfo">
-          <End Role="ActionInfo" Type="ExtractOilModel.Store.ActionInfo" Multiplicity="1" />
-          <End Role="ActionInfoRoleInfo" Type="ExtractOilModel.Store.ActionInfoRoleInfo" Multiplicity="*" />
+          <End Role="ActionInfo" Type="Self.ActionInfo" Multiplicity="1" />
+          <End Role="ActionInfoRoleInfo" Type="Self.ActionInfoRoleInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ActionInfo">
               <PropertyRef Name="ID" />
@@ -196,8 +148,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ActionInfoRoleInfo_RoleInfo">
-          <End Role="RoleInfo" Type="ExtractOilModel.Store.RoleInfo" Multiplicity="1" />
-          <End Role="ActionInfoRoleInfo" Type="ExtractOilModel.Store.ActionInfoRoleInfo" Multiplicity="*" />
+          <End Role="RoleInfo" Type="Self.RoleInfo" Multiplicity="1" />
+          <End Role="ActionInfoRoleInfo" Type="Self.ActionInfoRoleInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="RoleInfo">
               <PropertyRef Name="ID" />
@@ -208,8 +160,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DepartmentActionInfo_ActionInfo">
-          <End Role="ActionInfo" Type="ExtractOilModel.Store.ActionInfo" Multiplicity="1" />
-          <End Role="DepartmentActionInfo" Type="ExtractOilModel.Store.DepartmentActionInfo" Multiplicity="*" />
+          <End Role="ActionInfo" Type="Self.ActionInfo" Multiplicity="1" />
+          <End Role="DepartmentActionInfo" Type="Self.DepartmentActionInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ActionInfo">
               <PropertyRef Name="ID" />
@@ -220,8 +172,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DepartmentActionInfo_Department">
-          <End Role="Department" Type="ExtractOilModel.Store.Department" Multiplicity="1" />
-          <End Role="DepartmentActionInfo" Type="ExtractOilModel.Store.DepartmentActionInfo" Multiplicity="*" />
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="DepartmentActionInfo" Type="Self.DepartmentActionInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="ID" />
@@ -232,8 +184,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DepartmentUserInfo_Department">
-          <End Role="Department" Type="ExtractOilModel.Store.Department" Multiplicity="1" />
-          <End Role="DepartmentUserInfo" Type="ExtractOilModel.Store.DepartmentUserInfo" Multiplicity="*" />
+          <End Role="Department" Type="Self.Department" Multiplicity="1" />
+          <End Role="DepartmentUserInfo" Type="Self.DepartmentUserInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Department">
               <PropertyRef Name="ID" />
@@ -244,8 +196,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_DepartmentUserInfo_UserInfo">
-          <End Role="UserInfo" Type="ExtractOilModel.Store.UserInfo" Multiplicity="1" />
-          <End Role="DepartmentUserInfo" Type="ExtractOilModel.Store.DepartmentUserInfo" Multiplicity="*" />
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="DepartmentUserInfo" Type="Self.DepartmentUserInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserInfo">
               <PropertyRef Name="ID" />
@@ -256,8 +208,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_R_UserInfo_ActionInfoActionInfo">
-          <End Role="ActionInfo" Type="ExtractOilModel.Store.ActionInfo" Multiplicity="1" />
-          <End Role="R_UserInfo_ActionInfo" Type="ExtractOilModel.Store.R_UserInfo_ActionInfo" Multiplicity="*" />
+          <End Role="ActionInfo" Type="Self.ActionInfo" Multiplicity="1" />
+          <End Role="R_UserInfo_ActionInfo" Type="Self.R_UserInfo_ActionInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="ActionInfo">
               <PropertyRef Name="ID" />
@@ -268,8 +220,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_R_UserInfo_ActionInfoUserInfo">
-          <End Role="UserInfo" Type="ExtractOilModel.Store.UserInfo" Multiplicity="1" />
-          <End Role="R_UserInfo_ActionInfo" Type="ExtractOilModel.Store.R_UserInfo_ActionInfo" Multiplicity="*" />
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="R_UserInfo_ActionInfo" Type="Self.R_UserInfo_ActionInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserInfo">
               <PropertyRef Name="ID" />
@@ -280,10 +232,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Replys_Topics">
-          <End Role="Topics" Type="ExtractOilModel.Store.Topics" Multiplicity="1">
+          <End Role="Topics" Type="Self.Topics" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
-          <End Role="Replys" Type="ExtractOilModel.Store.Replys" Multiplicity="*" />
+          <End Role="Replys" Type="Self.Replys" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Topics">
               <PropertyRef Name="Id" />
@@ -294,8 +246,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserInfoRoleInfo_RoleInfo">
-          <End Role="RoleInfo" Type="ExtractOilModel.Store.RoleInfo" Multiplicity="1" />
-          <End Role="UserInfoRoleInfo" Type="ExtractOilModel.Store.UserInfoRoleInfo" Multiplicity="*" />
+          <End Role="RoleInfo" Type="Self.RoleInfo" Multiplicity="1" />
+          <End Role="UserInfoRoleInfo" Type="Self.UserInfoRoleInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="RoleInfo">
               <PropertyRef Name="ID" />
@@ -306,8 +258,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserInfoRoleInfo_UserInfo">
-          <End Role="UserInfo" Type="ExtractOilModel.Store.UserInfo" Multiplicity="1" />
-          <End Role="UserInfoRoleInfo" Type="ExtractOilModel.Store.UserInfoRoleInfo" Multiplicity="*" />
+          <End Role="UserInfo" Type="Self.UserInfo" Multiplicity="1" />
+          <End Role="UserInfoRoleInfo" Type="Self.UserInfoRoleInfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="UserInfo">
               <PropertyRef Name="ID" />
@@ -317,6 +269,64 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityContainer Name="ExtractOilModelStoreContainer">
+          <EntitySet Name="ActionInfo" EntityType="Self.ActionInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ActionInfoRoleInfo" EntityType="Self.ActionInfoRoleInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Department" EntityType="Self.Department" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DepartmentActionInfo" EntityType="Self.DepartmentActionInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DepartmentUserInfo" EntityType="Self.DepartmentUserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocumentInfo" EntityType="Self.DocumentInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="R_UserInfo_ActionInfo" EntityType="Self.R_UserInfo_ActionInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Replys" EntityType="Self.Replys" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleInfo" EntityType="Self.RoleInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Topics" EntityType="Self.Topics" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserInfoRoleInfo" EntityType="Self.UserInfoRoleInfo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ActionInfoRoleInfo_ActionInfo" Association="Self.FK_ActionInfoRoleInfo_ActionInfo">
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+            <End Role="ActionInfoRoleInfo" EntitySet="ActionInfoRoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActionInfoRoleInfo_RoleInfo" Association="Self.FK_ActionInfoRoleInfo_RoleInfo">
+            <End Role="RoleInfo" EntitySet="RoleInfo" />
+            <End Role="ActionInfoRoleInfo" EntitySet="ActionInfoRoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DepartmentActionInfo_ActionInfo" Association="Self.FK_DepartmentActionInfo_ActionInfo">
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+            <End Role="DepartmentActionInfo" EntitySet="DepartmentActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DepartmentActionInfo_Department" Association="Self.FK_DepartmentActionInfo_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="DepartmentActionInfo" EntitySet="DepartmentActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DepartmentUserInfo_Department" Association="Self.FK_DepartmentUserInfo_Department">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="DepartmentUserInfo" EntitySet="DepartmentUserInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DepartmentUserInfo_UserInfo" Association="Self.FK_DepartmentUserInfo_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="DepartmentUserInfo" EntitySet="DepartmentUserInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_R_UserInfo_ActionInfoActionInfo" Association="Self.FK_R_UserInfo_ActionInfoActionInfo">
+            <End Role="ActionInfo" EntitySet="ActionInfo" />
+            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_R_UserInfo_ActionInfoUserInfo" Association="Self.FK_R_UserInfo_ActionInfoUserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="R_UserInfo_ActionInfo" EntitySet="R_UserInfo_ActionInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Replys_Topics" Association="Self.FK_Replys_Topics">
+            <End Role="Topics" EntitySet="Topics" />
+            <End Role="Replys" EntitySet="Replys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfoRoleInfo_RoleInfo" Association="Self.FK_UserInfoRoleInfo_RoleInfo">
+            <End Role="RoleInfo" EntitySet="RoleInfo" />
+            <End Role="UserInfoRoleInfo" EntitySet="UserInfoRoleInfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserInfoRoleInfo_UserInfo" Association="Self.FK_UserInfoRoleInfo_UserInfo">
+            <End Role="UserInfo" EntitySet="UserInfo" />
+            <End Role="UserInfoRoleInfo" EntitySet="UserInfoRoleInfo" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -357,6 +367,7 @@
             <End Role="Topics" EntitySet="Topics" />
             <End Role="Replys" EntitySet="Replys" />
           </AssociationSet>
+          <EntitySet Name="DocumentInfo" EntityType="ExtractOilModel.DocumentInfo" />
         </EntityContainer>
         <EntityType Name="UserInfo">
           <Key>
@@ -497,6 +508,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="DocumentInfo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="FilePath" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -645,6 +665,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="DocumentInfo">
+            <EntityTypeMapping TypeName="ExtractOilModel.DocumentInfo">
+              <MappingFragment StoreEntitySet="DocumentInfo">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -661,6 +691,7 @@
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

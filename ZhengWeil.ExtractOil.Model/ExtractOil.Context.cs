@@ -32,5 +32,6 @@ namespace ZhengWeil.ExtractOil.Model
         public DbSet<ActionInfo> ActionInfo { get; set; }
         public DbSet<Replys> Replys { get; set; }
         public DbSet<Topics> Topics { get; set; }
+        public DbSet<DocumentInfo> DocumentInfo { get; set; }
     }
 }

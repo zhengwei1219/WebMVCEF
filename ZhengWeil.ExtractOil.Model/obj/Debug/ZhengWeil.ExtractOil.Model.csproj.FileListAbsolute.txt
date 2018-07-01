@@ -13,6 +13,6 @@ D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\bin\Debug\ZhengWeil.Ex
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\bin\Debug\EntityFramework.dll
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\bin\Debug\EntityFramework.xml
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
-D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.csprojResolveAssemblyReference.cache
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.dll
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.pdb
+D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.csprojResolveAssemblyReference.cache

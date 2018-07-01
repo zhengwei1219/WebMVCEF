@@ -90,10 +90,11 @@ function CompleteDoc(queueData) {
 }
 //成功返回处理
 function SuccessDoc(file, data, response) {
+    
     var result = JSON.parse(data);
     $("#btUpload").hide();
     $("#btCancel").hide();
-    if (result.Success == true) {
+    if (result.IsSuccess == true) {
         //alert(file.name + ":上传成功");
         LoadDataToGrid();
         return true;

@@ -53,6 +53,9 @@
     <Compile Include="Department.cs">
       <DependentUpon>ExtractOil.tt</DependentUpon>
     </Compile>
+    <Compile Include="DocumentInfo.cs">
+      <DependentUpon>ExtractOil.tt</DependentUpon>
+    </Compile>
     <Compile Include="Enum\DeleteEnumType.cs" />
     <Compile Include="ExtractOil.Context.cs">
       <AutoGen>True</AutoGen>

@@ -17,7 +17,11 @@ namespace ZhengWei.ExtractOil.DALFactory
        private static readonly string DalNameSpace = ConfigurationManager.AppSettings["DalNameSpace"];
 
        private static readonly string DalAssembly = ConfigurationManager.AppSettings["DalAssembly"];
-
+       public static IDocumentInfoDal CreateDocumentInfoDal()
+       {
+           string fullClassName = DalNameSpace + ".DocumentInfoDal";
+           return CreateInstance(fullClassName, DalAssembly) as IDocumentInfoDal;
+       }
        public static IUserInfoDal CreateUserInfoDal()
        {
            string fullClassName = DalNameSpace + ".UserInfoDal";

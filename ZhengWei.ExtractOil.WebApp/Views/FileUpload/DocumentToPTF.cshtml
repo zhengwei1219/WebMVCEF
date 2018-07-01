@@ -33,6 +33,7 @@
 <script type="text/javascript">
     $(function () {
         initGrid();
+        LoadDataToGrid();
     })
     var myData = [];
     var tableObj;
@@ -72,39 +73,11 @@
             height: 400,
             rowNum: 50,
             rowList: [50, 500, 1000, 'all'],
-            colNames: ["Id", 'DocName', "文档名称","文档路径", "父文档名称", "父文档路径", "文档类型","编写日期", "编写单位", "编写人", "备注", 'szwdzx_Id',
-            "录入人", "录入时间", "录入单位", "审核人", "审核时间", "审核单位", "最近更新人", "最近更新时间", "最近更新单位", "是否提交中心库", "发布单位", "采集方式", "发布质量", "发布质量", "密级", "能否编辑", "能否审核", "批次Id"],
+            colNames: ["Id", '文件名', "文件路径","创建时间"],
             colModel: [{ name: 'Id', index: 'Id', width: 1, hidden: true, hidedlg: true },
-                            { name: "DocName", index: "DocName", width: 1, align: "left", hidden: true, hidedlg: true },
-							{ name: "DocDisplayName", index: "DocDisplayName", width: 200, align: "left", sortable: false },
-                            //{ name: "DocPath", index: "DocPath", width: 10, hidden: true, sortable: false, hidedlg: true },
-                            { name: "DOC_URL", index: "DOC_URL", width: 10, hidden: true, sortable: false, hidedlg: true },
-                            { name: "ParentDoc.DocName", index: "ParentDocName", width: 80, align: "left", sortable: false },
-                            { name: "ParentDoc.DocPath", index: "ParentDocPath", hidden: true, sortable: false, hidedlg: true },
-                            { name: "DocClassCode", index: "DocClassCode", width: 80, align: "left", hidden: true, sortable: false, hidedlg: true },
-							{ name: "EndDate", index: "EndDate", width: 80, align: "right", formatter: "date", formatoptions: { newformat: 'Y-m-d' }, sortable: false },
-							{ name: "Org.Name", index: "Org.Name", width: 80, align: "left", sortable: false },
-							{ name: "Composer", index: "Composer", width: 80, align: "left", sortable: false, hidden: false, hidedlg: true },
-							{ name: "Remark", index: "Remark", width: 80, align: "left", sortable: false },
-                            { name: "szwdzx_Id", index: "szwdzx_Id", width: 80, align: "left", sortable: false, hidden: true, hidedlg: true },
-                            { name: "MetaData.Input_User", index: "MetaData.Input_User", hidden: true, hidedlg: true },
-                            { name: "MetaData.Input_Time", index: "MetaData.Input_Time", hidden: true, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, hidedlg: true },
-                            { name: "MetaData.Input_ORG", index: "MetaData.Input_ORG", hidden: true, hidedlg: true },
-                            { name: "MetaData.Verifier", index: "MetaData.Verifier", hidden: true, hidedlg: true },
-                            { name: "MetaData.Verify_Date", index: "MetaData.Verify_Date", hidden: true, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, hidedlg: true },
-                            { name: "MetaData.Verify_ORG", index: "MetaData.Verify_ORG", hidden: true, hidedlg: true },
-                            { name: "MetaData.Update_User", index: "MetaData.Update_User", hidden: true, hidedlg: true },
-                            { name: "MetaData.Update_Date", index: "MetaData.Update_Date", width: 80, formatter: "date", formatoptions: { newformat: 'Y-m-d' }, hidden: true, hidedlg: true },
-                            { name: "MetaData.Update_Org", index: "MetaData.Update_Org", hidden: true, hidedlg: true },
-                            { name: "MetaData.IS_Submit_Centre_DB", index: "MetaData.IS_Submit_Centre_DB", hidden: true, hidedlg: true },
-                            { name: "MetaData.Publish_ORG", index: "MetaData.Publish_ORG", hidden: true, hidedlg: true },
-                            { name: "MetaData.ACQTN_Mode", index: "MetaData.ACQTN_Mode", hidden: true, hidedlg: true },
-                            { name: "MetaData.Quality_Tag_Str", index: "MetaData.Quality_Tag_Str", hidden: true, hidedlg: true },
-                            { name: "MetaData.QualityTagText", index: "MetaData.QualityTagText", hidden: false, hidedlg: true },
-                            { name: "MetaData.Secrecy_Level", index: "MetaData.Secrecy_Level", hidden: true, hidedlg: true },
-                            { name: "CanEdit", index: "CanEdit", hidden: true, hidedlg: true },
-                            { name: "CanApp", index: "CanApp", hidden: true, hidedlg: true },
-                            { name: "MetaData.Batch.Id", index: "MetaData.Batch.Id", hidden: true, hidedlg: true }
+                            { name: "FileName", index: "FileName", width: 100},
+							{ name: "FilePath", index: "FilePath", width: 300},
+                            { name: "CreateDate", index: "CreateDate", width: 150}
             ],
             emptyrecords: "没有任何数据",
             multiselect: true,
@@ -126,8 +99,8 @@
                 var MetaDataStatus = getOneRowCol(rowid, "MetaData.Quality_Tag_Str");
                 if (getOneRowCol(rowid, "CanApp") != "false")
                     GridonCellSelect(tableObj, iCol, rowid, MetaDataStatus);
-            },
-            gridComplete: function () {
+            }
+            @*gridComplete: function () {
                 var ids = tableObj.getDataIDs();
                 for (var i = 0; i < ids.length; i++) {
                     var DocName = tableObj.getCell(ids[i], "DocName");
@@ -150,7 +123,7 @@
                     ExecErrorProcess(code, tableObj, dataType, code);
                 }
                 Setcluetip();
-            }
+            }*@
         }).navGrid('#pager', { refresh: false, edit: false, add: false, del: false, search: true, searchtext: '搜索' }, {}, {}, {}, {
             width: 680, sopt: ['eq', 'bw', 'ne', 'lt', 'le', 'gt', 'ge', 'ew', 'cn']
         }).jqGrid('navButtonAdd', "#pager", {
@@ -168,5 +141,20 @@
     }
     function dialogClose() {
         $('#DocDlg').dialog("close"); $.ajaxSetup({ cache: false })
+    }
+    var GetAllDocUrl = '@(Url.Action("GetAllDoc", "FileUpload"))';
+    function LoadDataToGrid() {
+        $.ajax({
+            type: "POST",
+            url: GetAllDocUrl, //服务
+            data: {},
+            success: function (data) {
+                myData = data;
+                refreshGrid(tableObj, myData);
+               // Setcluetip();
+            }, error: function (req, status, error) {
+                alert(error);
+            }
+        });
     }
 </script>
