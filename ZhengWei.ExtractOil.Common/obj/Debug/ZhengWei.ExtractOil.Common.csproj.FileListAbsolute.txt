@@ -12,3 +12,11 @@ D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\bin\Debug\Newtonsoft.J
 D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.dll
 D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.pdb
 D:\project\ZhengWei.ExtractOil\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.csprojResolveAssemblyReference.cache
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\bin\Debug\ZhengWei.ExtractOil.Common.dll
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\bin\Debug\ZhengWei.ExtractOil.Common.pdb
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\bin\Debug\Newtonsoft.Json.dll
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\bin\Debug\Newtonsoft.Json.xml
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.csproj.CoreCompileInputs.cache
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.csproj.CopyComplete
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.dll
+E:\MyProject\webMVCEF\ZhengWei.ExtractOil.Common\obj\Debug\ZhengWei.ExtractOil.Common.pdb

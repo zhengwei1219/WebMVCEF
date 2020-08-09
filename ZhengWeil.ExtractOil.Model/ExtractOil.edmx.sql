@@ -1,9 +1,9 @@
 
 -- --------------------------------------------------
--- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
+-- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 01/07/2018 19:20:53
--- Generated from EDMX file: F:\zhengwei\zhengweiPro\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\ExtractOil.edmx
+-- Date Created: 07/27/2020 21:11:15
+-- Generated from EDMX file: E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\ExtractOil.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -47,6 +47,9 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_DepartmentActionInfo_ActionInfo]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[DepartmentActionInfo] DROP CONSTRAINT [FK_DepartmentActionInfo_ActionInfo];
 GO
+IF OBJECT_ID(N'[dbo].[FK_Replys_Topics]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Replys] DROP CONSTRAINT [FK_Replys_Topics];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -66,6 +69,15 @@ IF OBJECT_ID(N'[dbo].[R_UserInfo_ActionInfo]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[ActionInfo]', 'U') IS NOT NULL
     DROP TABLE [dbo].[ActionInfo];
+GO
+IF OBJECT_ID(N'[dbo].[Replys]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Replys];
+GO
+IF OBJECT_ID(N'[dbo].[Topics]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Topics];
+GO
+IF OBJECT_ID(N'[dbo].[DocumentInfo]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DocumentInfo];
 GO
 IF OBJECT_ID(N'[dbo].[UserInfoRoleInfo]', 'U') IS NOT NULL
     DROP TABLE [dbo].[UserInfoRoleInfo];
@@ -149,6 +161,39 @@ CREATE TABLE [dbo].[ActionInfo] (
 );
 GO
 
+-- Creating table 'Replys'
+CREATE TABLE [dbo].[Replys] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [TopicId] int  NOT NULL,
+    [ReplyDate] datetime  NULL,
+    [Content] nvarchar(1000)  NULL,
+    [ReplyName] nvarchar(50)  NULL,
+    [UserHostAddress] nvarchar(50)  NULL
+);
+GO
+
+-- Creating table 'Topics'
+CREATE TABLE [dbo].[Topics] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [Title] nvarchar(100)  NOT NULL,
+    [Author] nvarchar(20)  NULL,
+    [AddDate] datetime  NULL,
+    [Content] nvarchar(1000)  NULL,
+    [UserName] nvarchar(50)  NULL,
+    [UserHostAddress] nvarchar(50)  NULL,
+    [LastModifyDate] datetime  NULL
+);
+GO
+
+-- Creating table 'DocumentInfo'
+CREATE TABLE [dbo].[DocumentInfo] (
+    [Id] int IDENTITY(1,1) NOT NULL,
+    [FileName] nvarchar(1000)  NULL,
+    [FilePath] nvarchar(2000)  NOT NULL,
+    [CreateDate] datetime  NULL
+);
+GO
+
 -- Creating table 'UserInfoRoleInfo'
 CREATE TABLE [dbo].[UserInfoRoleInfo] (
     [UserInfo_ID] int  NOT NULL,
@@ -211,28 +256,46 @@ ADD CONSTRAINT [PK_ActionInfo]
     PRIMARY KEY CLUSTERED ([ID] ASC);
 GO
 
+-- Creating primary key on [Id] in table 'Replys'
+ALTER TABLE [dbo].[Replys]
+ADD CONSTRAINT [PK_Replys]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'Topics'
+ALTER TABLE [dbo].[Topics]
+ADD CONSTRAINT [PK_Topics]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [Id] in table 'DocumentInfo'
+ALTER TABLE [dbo].[DocumentInfo]
+ADD CONSTRAINT [PK_DocumentInfo]
+    PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
 -- Creating primary key on [UserInfo_ID], [RoleInfo_ID] in table 'UserInfoRoleInfo'
 ALTER TABLE [dbo].[UserInfoRoleInfo]
 ADD CONSTRAINT [PK_UserInfoRoleInfo]
-    PRIMARY KEY NONCLUSTERED ([UserInfo_ID], [RoleInfo_ID] ASC);
+    PRIMARY KEY CLUSTERED ([UserInfo_ID], [RoleInfo_ID] ASC);
 GO
 
 -- Creating primary key on [ActionInfo_ID], [RoleInfo_ID] in table 'ActionInfoRoleInfo'
 ALTER TABLE [dbo].[ActionInfoRoleInfo]
 ADD CONSTRAINT [PK_ActionInfoRoleInfo]
-    PRIMARY KEY NONCLUSTERED ([ActionInfo_ID], [RoleInfo_ID] ASC);
+    PRIMARY KEY CLUSTERED ([ActionInfo_ID], [RoleInfo_ID] ASC);
 GO
 
 -- Creating primary key on [Department_ID], [UserInfo_ID] in table 'DepartmentUserInfo'
 ALTER TABLE [dbo].[DepartmentUserInfo]
 ADD CONSTRAINT [PK_DepartmentUserInfo]
-    PRIMARY KEY NONCLUSTERED ([Department_ID], [UserInfo_ID] ASC);
+    PRIMARY KEY CLUSTERED ([Department_ID], [UserInfo_ID] ASC);
 GO
 
 -- Creating primary key on [Department_ID], [ActionInfo_ID] in table 'DepartmentActionInfo'
 ALTER TABLE [dbo].[DepartmentActionInfo]
 ADD CONSTRAINT [PK_DepartmentActionInfo]
-    PRIMARY KEY NONCLUSTERED ([Department_ID], [ActionInfo_ID] ASC);
+    PRIMARY KEY CLUSTERED ([Department_ID], [ActionInfo_ID] ASC);
 GO
 
 -- --------------------------------------------------
@@ -357,6 +420,20 @@ ADD CONSTRAINT [FK_DepartmentActionInfo_ActionInfo]
 CREATE INDEX [IX_FK_DepartmentActionInfo_ActionInfo]
 ON [dbo].[DepartmentActionInfo]
     ([ActionInfo_ID]);
+GO
+
+-- Creating foreign key on [TopicId] in table 'Replys'
+ALTER TABLE [dbo].[Replys]
+ADD CONSTRAINT [FK_Replys_Topics]
+    FOREIGN KEY ([TopicId])
+    REFERENCES [dbo].[Topics]
+        ([Id])
+    ON DELETE CASCADE ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_Replys_Topics'
+CREATE INDEX [IX_FK_Replys_Topics]
+ON [dbo].[Replys]
+    ([TopicId]);
 GO
 
 -- --------------------------------------------------

@@ -63,8 +63,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FileName" Type="nvarchar" MaxLength="1000" />
-          <Property Name="FilePath" Type="nvarchar" MaxLength="2000" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+          <Property Name="FilePath" Type="nvarchar" MaxLength="100" />
           <Property Name="CreateDate" Type="datetime" />
         </EntityType>
         <EntityType Name="R_UserInfo_ActionInfo">
@@ -513,8 +513,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FileName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
-          <Property Name="FilePath" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="FilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
         </EntityType>
       </Schema>
@@ -591,6 +591,42 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Replys">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.Replys)">
+        <MappingFragment StoreEntitySet="Replys">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="TopicId" ColumnName="TopicId" />
+          <ScalarProperty Name="ReplyDate" ColumnName="ReplyDate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="ReplyName" ColumnName="ReplyName" />
+          <ScalarProperty Name="UserHostAddress" ColumnName="UserHostAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Topics">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.Topics)">
+        <MappingFragment StoreEntitySet="Topics">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Author" ColumnName="Author" />
+          <ScalarProperty Name="AddDate" ColumnName="AddDate" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserHostAddress" ColumnName="UserHostAddress" />
+          <ScalarProperty Name="LastModifyDate" ColumnName="LastModifyDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentInfo">
+      <EntityTypeMapping TypeName="IsTypeOf(ExtractOilModel.DocumentInfo)">
+        <MappingFragment StoreEntitySet="DocumentInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <AssociationSetMapping Name="UserInfoRoleInfo" TypeName="ExtractOilModel.UserInfoRoleInfo" StoreEntitySet="UserInfoRoleInfo">
       <EndProperty Name="UserInfo">
         <ScalarProperty Name="ID" ColumnName="UserInfo_ID" />
@@ -639,42 +675,6 @@
         <ScalarProperty Name="ID" ColumnName="ActionInfo_ID" />
       </EndProperty>
     </AssociationSetMapping>
-          <EntitySetMapping Name="Replys">
-            <EntityTypeMapping TypeName="ExtractOilModel.Replys">
-              <MappingFragment StoreEntitySet="Replys">
-                <ScalarProperty Name="UserHostAddress" ColumnName="UserHostAddress" />
-                <ScalarProperty Name="ReplyName" ColumnName="ReplyName" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="ReplyDate" ColumnName="ReplyDate" />
-                <ScalarProperty Name="TopicId" ColumnName="TopicId" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Topics">
-            <EntityTypeMapping TypeName="ExtractOilModel.Topics">
-              <MappingFragment StoreEntitySet="Topics">
-                <ScalarProperty Name="LastModifyDate" ColumnName="LastModifyDate" />
-                <ScalarProperty Name="UserHostAddress" ColumnName="UserHostAddress" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
-                <ScalarProperty Name="Content" ColumnName="Content" />
-                <ScalarProperty Name="AddDate" ColumnName="AddDate" />
-                <ScalarProperty Name="Author" ColumnName="Author" />
-                <ScalarProperty Name="Title" ColumnName="Title" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DocumentInfo">
-            <EntityTypeMapping TypeName="ExtractOilModel.DocumentInfo">
-              <MappingFragment StoreEntitySet="DocumentInfo">
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
-                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
-                <ScalarProperty Name="FileName" ColumnName="FileName" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>

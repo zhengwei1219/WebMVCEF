@@ -65,3 +65,19 @@
 2018-06-26 08:38:29,479 [16] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
 2018-06-26 08:38:29,673 [16] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
 2018-06-26 08:38:29,732 [16] INFO  FTPLogger FTP上传文件成功，文件名为：52ef079f-c043-429e-848d-e0bacc241706_git-bash.exe !
+2020-07-27 21:20:25,484 [43] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 无法连接到远程服务器
+2020-07-27 21:23:09,618 [43] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 无法连接到远程服务器
+2020-07-27 21:26:00,340 [27] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 无法连接到远程服务器
+2020-07-27 21:26:21,344 [21] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 无法连接到远程服务器
+2020-07-27 21:35:13,988 [72] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (530) 未登录。
+2020-07-27 21:35:32,097 [70] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (530) 未登录。
+2020-07-27 21:36:06,380 [70] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (530) 未登录。
+2020-07-27 21:37:25,372 [69] INFO  FTPLogger FtpWeb GetFilesDetailList Error --> 远程服务器返回错误: (530) 未登录。
+2020-07-27 22:14:58,995 [8] INFO  FTPLogger FtpWeb MakeDir Success -->Maps 
+2020-07-27 22:14:59,015 [8] INFO  FTPLogger FtpWeb MakeDir Success -->2020 
+2020-07-27 22:14:59,020 [8] INFO  FTPLogger FtpWeb MakeDir Success -->07-27 
+2020-07-27 22:14:59,035 [8] INFO  FTPLogger FTP上传文件成功，文件名为：5be2cb98-1667-4094-a596-ea75594140a9_7z.dll !
+2020-07-27 22:15:07,092 [10] INFO  FTPLogger FtpWeb MakeDir Error --> 远程服务器返回错误: (550) 文件不可用(例如，未找到文件，无法访问文件)。
+2020-07-27 22:15:07,095 [10] INFO  FTPLogger FtpWeb MakeDir Success -->2020 
+2020-07-27 22:15:07,098 [10] INFO  FTPLogger FtpWeb MakeDir Success -->07-27 
+2020-07-27 22:15:07,101 [10] INFO  FTPLogger FTP上传文件成功，文件名为：deab217f-4086-4bcf-a7b0-1d5c15ecf0f4_chrome_elf.dll !

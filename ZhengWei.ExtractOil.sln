@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhengWeil.ExtractOil.Model", "ZhengWeil.ExtractOil.Model\ZhengWeil.ExtractOil.Model.csproj", "{20C7AE7B-E296-4EAB-8EC3-D229B3ABB8CD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhengWei.ExtractOil.IDAL", "ZhengWei.ExtractOil.IDAL\ZhengWei.ExtractOil.IDAL.csproj", "{8E682130-35DA-46A2-870A-82F21CB50160}"
@@ -16,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhengWei.ExtractOil.WebApp", "ZhengWei.ExtractOil.WebApp\ZhengWei.ExtractOil.WebApp.csproj", "{67E1F631-26BC-4F23-8A10-DB0E8522DF63}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZhengWei.ExtractOil.Common", "ZhengWei.ExtractOil.Common\ZhengWei.ExtractOil.Common.csproj", "{BC6A0408-3760-43F4-814E-9C19879CD98A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenTest", "WebApplication1\TokenTest.csproj", "{F3CD79CF-EAEA-40BA-A9AF-B94E5809B78D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenWebApiTest", "TokenWebApiTest\TokenWebApiTest.csproj", "{3DC2AB1A-4968-40A4-8DC7-0CD03FB8EB93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,8 +61,19 @@ Global
 		{BC6A0408-3760-43F4-814E-9C19879CD98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC6A0408-3760-43F4-814E-9C19879CD98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC6A0408-3760-43F4-814E-9C19879CD98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CD79CF-EAEA-40BA-A9AF-B94E5809B78D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CD79CF-EAEA-40BA-A9AF-B94E5809B78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CD79CF-EAEA-40BA-A9AF-B94E5809B78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CD79CF-EAEA-40BA-A9AF-B94E5809B78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC2AB1A-4968-40A4-8DC7-0CD03FB8EB93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC2AB1A-4968-40A4-8DC7-0CD03FB8EB93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC2AB1A-4968-40A4-8DC7-0CD03FB8EB93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC2AB1A-4968-40A4-8DC7-0CD03FB8EB93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74B57BA3-F393-4C51-A91A-5372C38203F8}
 	EndGlobalSection
 EndGlobal

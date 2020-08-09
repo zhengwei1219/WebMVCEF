@@ -58,8 +58,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FileName" Type="nvarchar" MaxLength="1000" />
-    <Property Name="FilePath" Type="nvarchar" MaxLength="2000" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="FilePath" Type="nvarchar" MaxLength="100" />
     <Property Name="CreateDate" Type="datetime" />
   </EntityType>
   <EntityType Name="R_UserInfo_ActionInfo">

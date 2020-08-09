@@ -16,3 +16,16 @@ D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\bin\Debug\zh-Hans\Enti
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.dll
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.pdb
 D:\project\ZhengWei.ExtractOil\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.csprojResolveAssemblyReference.cache
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\ZhengWeil.ExtractOil.Model.dll.config
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\ZhengWeil.ExtractOil.Model.dll
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\ZhengWeil.ExtractOil.Model.pdb
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\EntityFramework.dll
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\JWT.dll
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\Newtonsoft.Json.dll
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\EntityFramework.xml
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\Newtonsoft.Json.xml
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.csproj.CoreCompileInputs.cache
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.csproj.CopyComplete
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.dll
+E:\MyProject\webMVCEF\ZhengWeil.ExtractOil.Model\obj\Debug\ZhengWeil.ExtractOil.Model.pdb
